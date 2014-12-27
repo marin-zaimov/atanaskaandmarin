@@ -1,0 +1,48 @@
+#rsvp-email-div{
+  display: inline;
+}
+#rsvp-form {
+  display:none;
+}
+
+#rsvp-form{
+  position: relative;
+  width: 100%;
+  padding-top: 120px;
+  padding-right: 0;
+  padding-bottom: 60px;
+  padding-left: 0;
+  font-family: 'EB Garamond', serif;
+  color: #888;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  background-image: url(../img/bg.png);
+  background-repeat: repeat;
+  background-position: center center;
+}
+
+
+#rsvp-form:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 26px;
+  background-image: url(../img/line.png);
+  background-repeat: repeat-x;
+  background-position: top center;
+}
+
+#rsvp-form:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 26px;
+  background-image: url(../img/line.png);
+  background-repeat: repeat-x;
+  background-position: top center;
+}

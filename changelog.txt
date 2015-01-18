@@ -1,0 +1,39 @@
+/*
+  ========================================
+  DITINGGAL RABI WEDDING INVITATION THEME
+  ========================================
+	
+  @author	: @avriqq
+  @version	: v1.1
+  @date-create	: 02/26/2013
+  @last-update	: 04/22/2014
+  @file-name	: style
+
+*/
+
+CHANGELOG
+
+v1.1 (04/22/2014)
+
+- Remove scrollTo js
+- Remove backgroundSize js
+- Remove homestead-display font
+- Remove alex brush font
+- Remove playfair display font
+- Remove rokkitt font
+- Add html5shiv js
+- Add respond js
+- Add colorbox js
+- Add easing js
+- Add gmap3 js
+- Add colorbox css
+- Add responsive css
+- Add dancing script font
+- Add eb garamond font
+- Add raleway font
+- Update fontAwesome v4.0.3
+- Update bootstrap v3.1.1
+- Change photos / wedding gallery style
+- Add story timeline
+- Add copyright
+- Add social icon

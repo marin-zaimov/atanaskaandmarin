@@ -1,11 +1,9 @@
 <?php
 
 function getGuest($email) {
+
+  include "dbCreds.php";
   try {
-    $servername = "127.0.0.1";
-    $username = "root";
-    $password = "marin";
-    $dbname = "atanaskaandmarin";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

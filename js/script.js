@@ -127,6 +127,10 @@ $(document).ready(function() {
       going: $("input:radio[name=going]:checked").val()
     };
   }
+
+  function switchLanguage() {
+    
+  }
 	
 });
 

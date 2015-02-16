@@ -1,7 +1,7 @@
 <?php
 
-    header("Location: "."/under-construction.html");
-    die();
+    // header("Location: "."/under-construction.html");
+    // die();
     include_once "backend/indexPhpCode.php";
   ?>
 <!DOCTYPE html>

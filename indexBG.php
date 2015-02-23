@@ -63,7 +63,7 @@
             <li><a href="#photos">Photos</a></li>
             <li><a href="#story">Story</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li title="Switch to English"><a href="index.php" class="flag-a"><img src="img/usa-flag.png" height="40" alt="Switch to English"></a></li>
+            <li title="Switch to English"><a href="index.php" class="flag-a"><img src="img/usa-flag.png" height="35" alt="Switch to English"></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>

@@ -10,7 +10,7 @@ try {
     die('{"success": false, "message": "'.mysql_error().'"}');
   }
   $sql = 'UPDATE guests
-          SET rsvp="'.$_POST['going'].'"
+          SET rsvp="'.$_POST['rspv'].'"
           WHERE email=\''.$_POST['email'].'\'';
 
   mysql_select_db('atanaskaandmarin');

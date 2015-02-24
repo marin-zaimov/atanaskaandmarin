@@ -94,43 +94,112 @@
       </div>
     </section>
     <!-- end:home -->
-     <a href="http://atanaskaandmarin.com?email=nasi.mircheva@gmail.com">otgovor!</a>
+     <!-- <a href="http://atanaskaandmarin.com?email=nasi.mircheva@gmail.com">otgovor!</a> -->
      <!--  begin: rsvp form -->
-    <section id="rsvp-form">
+
+    <section id="rsvp-form" style="<?php echo ($userRow == null) ? "display:none" : ""; ?>">
     <div class="about-inner">
       <div class="container">
+
+        <input type="hidden" id="hiddenEmail" value="<?php echo $userRow['email']; ?>" />
+
+        <div class="answer-section">
+          <h3>RSVP</h3>
+
+          <div class="row">
+            <div class="col-md-5">Are you joining Atanaska and Marin on July 12th, 2015?</div>
+            <div class="col-md-7">
+              <input type="radio" name="rsvp" value="Y" id="rsvp-radio-yes"/> Yes &nbsp; &nbsp;
+              <input type="radio" name="rsvp" value="N" /> No
+            </div>
+          </div>
+
+
+          <?php if ($userRow['bachelorPartyInvited'] == 'Y'): ?>
+            <div class="row restOfForm">
+              <div class="col-md-5">Will you be joining in any bachelor party activities?</div>
+              <div class="col-md-7">
+                <input type="radio" name="bachelorPartyRsvp" value="Y"/> Yes &nbsp; &nbsp;
+                <input type="radio" name="bachelorPartyRsvp" value="N" /> No
+              </div>
+            </div>
+          <?php endif; ?>
+
+          <div class="row restOfForm">
+            <div class="col-md-5">Which of the following friends will be accompanying you?</div>
+            <div class="col-md-7">
+              <input type="checkbox" value="Y"/> Bro1</br>
+              <input type="checkbox" value="Y"/> Bro2</br>
+              <input type="checkbox" value="Y"/> Bro3</br>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="answer-section restOfForm">
+          <h3>Travel details</h3>Answer what you can. You can come back and update this at any time.
+        
+          <?php if ($userRow['bachelorPartyInvited'] == 'N'): ?>
+            <div class="row">
+              <div class="col-md-5">With what transport do you plan on traveling in Bulgaria? (rental car, buses, trains)</div>
+              <div class="col-md-7"><input value="" type="text"/></div>
+            </div>
+          <?php endif; ?>
+          
+          <div class="row">
+            <div class="col-md-5">What day will be arriving in Bulgaria? (write date out in whatever format suits your fancy. I was too lazy to put a datepicker in here :)</div>
+            <div class="col-md-7"><input value="" type="text"/></div>
+          </div>
+        </div>
+
+        
+
+
+        <div class="answer-section restOfForm">
+          <h3>Wedding location details</h3>
+        
+          <div class="row">
+            <div class="col-md-5">Are you sleeping in the hut (bunk bed) or do you have your own tent?</div>
+            <div class="col-md-7">
+              <input type="radio" name="sleepLocation" value="hut" checked/> I'm sleeping in the hut. </br>
+              <input type="radio" name="sleepLocation" value="tent" /> I'd like to sleep in my tent even though a bed is provided for me inside.
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">Do you have any food allergies or concerns we should be aware of?</div>
+            <div class="col-md-7"><input value="" type="text"/></div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">Would you prefer a vegetarian menu?</div>
+            <div class="col-md-7">
+                <input type="radio" name="vegetarian" value="Y" /> Yes &nbsp; &nbsp;
+                <input type="radio" name="vegetarian" value="N" /> No
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="answer-section restOfForm">
+          <h3>We'll save your answers to the following questions forever! We're looking for your interesting explanations</h3>
+          
+          <div class="row">
+            <div class="col-md-5">How and when did you meet Atanaska?</div>
+            <div class="col-md-7"><textarea value="" ></textarea></div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">How and when did you meet Marin?</div>
+            <div class="col-md-7"><textarea value="" ></textarea></div>
+          </div>
+        </div>
+
         <div class="row">
-          <input type="hidden" id="hiddenEmail" value="" />
-          <div class="col-md-3">Going?</div>
-          <div class="col-md-9">
-            <input type="radio" name="going" value="Y" id="rsvp-radio-yes"/>Yes &nbsp; &nbsp;
-            <input type="radio" name="going" value="N" />No
-          </div>
+          <div class="col-md-5"></div>
+          <div class="col-md-7"><button id="rsvpSubmit">Submit Response</button></div>
         </div>
-        <div id="restOfForm">
-          <div class="row">
-            <div class="col-md-3">Ime</div>
-            <div class="col-md-9"><input value="" /></div>
-          </div>
-          <div class="row">
-            <div class="col-md-3">Ime</div>
-            <div class="col-md-9"><input value="" /></div>
-          </div>
-          <div class="row">
-            <div class="col-md-3">Ime</div>
-            <div class="col-md-9"><input value="" /></div>
-          </div>
-          <div class="row">
-            <div class="col-md-3">Ime</div>
-            <div class="col-md-9"><input value="" /></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-9"><button id="rsvpSubmit">Submit Response</button></div>
-        </div>
+
       </div>
-      
     </div>
   </section>
     <!--  end: rsvp form -->

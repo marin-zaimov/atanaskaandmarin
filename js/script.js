@@ -83,18 +83,16 @@ $(document).ready(function() {
     $.get( "backend/checkEmail.php?email="+$('#rsvp-input').val(), function( data ) {
       data = jQuery.parseJSON(data);
       if (data.success == true && data.message != "notFound") {
-        populateRsvpForm(data.data);
-        $("#rsvp-form").slideDown();
-        $('#hiddenEmail').val($('#rsvp-input').val());
+        window.location.href = "?email=" + $('#rsvp-input').val();
       }
       else {
-        alert("Incorrect Email");
+        alert("This email is not on our invite list. Please email wedding@atanaskaandmarin.com for help.");
       }
     });
   });
 
   $('#rsvp-radio-yes').click(function() {
-    $('#restOfForm').slideDown();
+    $('.restOfForm').slideDown();
   });
   $('#rsvpSubmit').click(function() {
     //TODO(Marin):add validation to form
@@ -118,7 +116,7 @@ $(document).ready(function() {
 
   function gatherFormdata() {
 //TODO(Marin): get all of the inputs here
-    var selected = $("input[type='radio'][name='going']:checked");
+    var selected = $("input[type='radio'][name='rsvp']:checked");
     if (selected.length > 0) {
         selectedVal = selected.val();
     }
@@ -128,9 +126,6 @@ $(document).ready(function() {
     };
   }
 
-  function switchLanguage() {
-    
-  }
 	
 });
 

@@ -13,7 +13,7 @@ function getGuest($email) {
     } 
 
   //TODO(Marin): send back all fields here
-    $sql = "SELECT id, email, firstName, lastName, rsvp, language, emailOwner FROM guests";
+    $sql = "SELECT id, email, firstName, lastName, rsvp, language, emailOwner, bachelorPartyInvited, bachelorPartyRsvp FROM guests";
     $result = $conn->query($sql);
 
     $emailToSearchFor = $email;

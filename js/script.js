@@ -43,7 +43,7 @@ $(document).ready(function() {
 		 map:{
 		    options:{
 		      center:[42.6660438,24.9298189],
-		      zoom: 13,
+		      zoom: 12,
 			  scrollwheel: false
 		    }
  		 },
@@ -73,6 +73,17 @@ $(document).ready(function() {
 
 	});
 
+
+
+
+
+
+
+
+  if ($('#jump_to_form').length != 0) {
+    window.location.hash = 'jump_to_form';
+  }
+
   $('#rsvp-span').click(function() {
     $('#rsvp-email-div').fadeIn();
   })
@@ -92,38 +103,97 @@ $(document).ready(function() {
   });
 
   $('#rsvp-radio-yes').click(function() {
-    $('.restOfForm').slideDown();
+    $('.restOfForm').slideDown("fast");
   });
+  $('#rsvp-radio-no').click(function() {
+    $('.restOfForm').slideUp("fast");
+  });
+
   $('#rsvpSubmit').click(function() {
-    //TODO(Marin):add validation to form
-    var formData = gatherFormdata();
+    clearMessages();
+    var formData = gatherFormData();
+    console.log(formData);
+    if (formData == null) {
+      fieldRequiredMessage("Please fill out all fields in the form before submit");
+      return;
+    }
     $.post( "backend/rsvpSubmit.php", formData, function( data ) {
       data = jQuery.parseJSON(data);
       if (data.success == true && data.message == true) {
-        alert("Saved");
+        savedMessage();
       }
       else {
-        alert("Failed to Save");
+        saveFailMessage();
       }
     });
   });
 
-  function populateRsvpForm(data) {
-    console.log(data);
-    //TODO(Marin): populate the form here. Check what type of existing rsvp is, and ask to change response.
-    // if (data.r)
-  }
 
-  function gatherFormdata() {
-//TODO(Marin): get all of the inputs here
+  function gatherFormData() {
+
     var selected = $("input[type='radio'][name='rsvp']:checked");
+    
     if (selected.length > 0) {
         selectedVal = selected.val();
     }
+    if (selectedVal == "Y") {
+
+      if (isEmpty($('#hiddenEmail').val())
+      || isEmpty($("input:radio[name=rsvp]:checked").val())
+      || isEmpty($("input:radio[name=bachelorPartyRsvp]:checked").val())
+      || ($("input[name=transport]").length > 0 && isEmpty($("input[name=transport]").val()))
+      || ($("input[name=arrivalDay]").length > 0 && isEmpty($("input[name=arrivalDay]").val()))
+      || ($("input:radio[name=sleepLocation]:checked").length > 0 && isEmpty($("input:radio[name=sleepLocation]:checked").val()))
+      || ($("input[name=allergies]").length > 0 && isEmpty($("input[name=allergies]").val()))
+      || ($("input:radio[name=vegetarian]:checked").length > 0 && isEmpty($("input:radio[name=vegetarian]:checked").val()))
+      ) {
+        return null;
+      }
+      return {
+        email : $('#hiddenEmail').val(),
+        rsvp : $("input:radio[name=rsvp]:checked").val(),
+        bachelorPartyRsvp : $("input:radio[name=bachelorPartyRsvp]:checked").val(),
+        transport : $("input[name=transport]").val(),
+        arrivalDay : $("input[name=arrivalDay]").val(),
+        sleepLocation : $("input:radio[name=sleepLocation]:checked").val(),
+        allergies : $("input[name=allergies]").val(),
+        vegetarian : $("input:radio[name=vegetarian]:checked").val(),
+        meetAtanaska : $("textarea[name=meetAtanaska]").val(),
+        meetMarin : $("textarea[name=meetMarin]").val(),
+      };
+    }
+
+    if ((isEmpty($('#hiddenEmail').val()) || isEmpty($("input:radio[name=rsvp]:checked").val()))) {
+      return null;
+    }
     return {
       email: $('#hiddenEmail').val(),
-      going: $("input:radio[name=going]:checked").val()
+      rsvp: $("input:radio[name=rsvp]:checked").val()
     };
+  }
+
+  function isEmpty(input) {
+    console.log(input);
+    if (input == "" || input == null || input == undefined) {
+      return true;
+    }
+    return false;
+  }
+
+  function clearMessages() {
+    $('#fieldRequiredMessage').hide();
+    $('#savedMessage').hide();
+  }
+  function fieldRequiredMessage(message) {
+    $('#fieldRequiredMessage').show();
+  }
+
+  function savedMessage() {
+    $('#savedMessage').show();
+  }
+
+  function saveFailMessage() {
+    $('#saveFailMessage').show();
   }
 
 	

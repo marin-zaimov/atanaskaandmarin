@@ -33,6 +33,14 @@
 
     <link href="css/marin.css" rel="stylesheet">
 
+    <?php if ($userRow['rsvp'] == 'Y'): ?>
+      <style>
+        .restOfForm {
+          display: block;
+        }
+      </style>
+    <?php endif; ?>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -60,11 +68,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#home">Home</a></li>
+            <?php if ($userRow != null): ?>
+              <li><a href="#rsvp-form">R.S.V.P.</a></li>
+            <?php endif; ?>
             <li><a href="#about">About</a></li>
             <li><a href="#ceremony">Ceremony</a></li>
             <li><a href="#photos">Photos</a></li>
             <li><a href="#story">Story</a></li>
-            <li><a href="#contact">asdasd</a></li>
+            <li><a href="#copyright">Contact</a></li>
             <li title="Switch to Bulgarian"><a href="indexBG.php" class="flag-a"><img src="img/bg-flag.png" height="40" alt="Switch to Bulgarian"></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -97,20 +108,24 @@
      <!-- <a href="http://atanaskaandmarin.com?email=nasi.mircheva@gmail.com">otgovor!</a> -->
      <!--  begin: rsvp form -->
 
+        <?php if ($userRow != null): ?>
+          <span id='jump_to_form'></span>
+        <?php endif; ?>
     <section id="rsvp-form" style="<?php echo ($userRow == null) ? "display:none" : ""; ?>">
     <div class="about-inner">
       <div class="container">
 
+
         <input type="hidden" id="hiddenEmail" value="<?php echo $userRow['email']; ?>" />
 
         <div class="answer-section">
-          <h3>RSVP</h3>
+          <h3>R.S.V.P.</h3>
 
           <div class="row">
             <div class="col-md-5">Are you joining Atanaska and Marin on July 12th, 2015?</div>
             <div class="col-md-7">
-              <input type="radio" name="rsvp" value="Y" id="rsvp-radio-yes"/> Yes &nbsp; &nbsp;
-              <input type="radio" name="rsvp" value="N" /> No
+              <input type="radio" name="rsvp" value="Y" id="rsvp-radio-yes" <?php if ($userRow['rsvp'] == 'Y'): ?> checked <?php endif; ?>/> Yes &nbsp; &nbsp;
+              <input type="radio" name="rsvp" value="N" id="rsvp-radio-no" <?php if ($userRow['rsvp'] == 'N'): ?> checked <?php endif; ?>/> No
             </div>
           </div>
 
@@ -119,8 +134,8 @@
             <div class="row restOfForm">
               <div class="col-md-5">Will you be joining in any bachelor party activities?</div>
               <div class="col-md-7">
-                <input type="radio" name="bachelorPartyRsvp" value="Y"/> Yes &nbsp; &nbsp;
-                <input type="radio" name="bachelorPartyRsvp" value="N" /> No
+                <input type="radio" name="bachelorPartyRsvp" value="Y" <?php if ($userRow['bachelorPartyRsvp'] == 'Y'): ?> checked <?php endif; ?>/> Yes &nbsp; &nbsp;
+                <input type="radio" name="bachelorPartyRsvp" value="N" <?php if ($userRow['bachelorPartyRsvp'] == 'N'): ?> checked <?php endif; ?>/> No
               </div>
             </div>
           <?php endif; ?>
@@ -143,13 +158,13 @@
           <?php if ($userRow['bachelorPartyInvited'] == 'N'): ?>
             <div class="row">
               <div class="col-md-5">With what transport do you plan on traveling in Bulgaria? (rental car, buses, trains)</div>
-              <div class="col-md-7"><input value="" type="text"/></div>
+              <div class="col-md-7"><input name="transport" value="<?php echo $userRow['transport']; ?>" type="text"/></div>
             </div>
           <?php endif; ?>
           
           <div class="row">
-            <div class="col-md-5">What day will be arriving in Bulgaria? (write date out in whatever format suits your fancy. I was too lazy to put a datepicker in here :)</div>
-            <div class="col-md-7"><input value="" type="text"/></div>
+            <div class="col-md-5">What day will you be arriving in Bulgaria? (write date out in whatever format suits your fancy. I was too lazy to put a datepicker in here :)</div>
+            <div class="col-md-7"><input name="arrivalDay" value="<?php echo $userRow['arrivalDay']; ?>" type="text"/></div>
           </div>
         </div>
 
@@ -162,19 +177,19 @@
           <div class="row">
             <div class="col-md-5">Are you sleeping in the hut (bunk bed) or do you have your own tent?</div>
             <div class="col-md-7">
-              <input type="radio" name="sleepLocation" value="hut" checked/> I'm sleeping in the hut. </br>
-              <input type="radio" name="sleepLocation" value="tent" /> I'd like to sleep in my tent even though a bed is provided for me inside.
+              <input type="radio" name="sleepLocation" value="hut" <?php if ($userRow['sleepLocation'] == 'hut'): ?> checked <?php endif; ?>/> I'm sleeping in the hut. </br>
+              <input type="radio" name="sleepLocation" value="tent" <?php if ($userRow['sleepLocation'] == 'tent'): ?> checked <?php endif; ?>/> I'd like to sleep in my tent even though a bed is provided for me inside.
             </div>
           </div>
           <div class="row">
             <div class="col-md-5">Do you have any food allergies or concerns we should be aware of?</div>
-            <div class="col-md-7"><input value="" type="text"/></div>
+            <div class="col-md-7"><input name="allergies" value="<?php echo $userRow['allergies']; ?>" type="text"/></div>
           </div>
           <div class="row">
             <div class="col-md-5">Would you prefer a vegetarian menu?</div>
             <div class="col-md-7">
-                <input type="radio" name="vegetarian" value="Y" /> Yes &nbsp; &nbsp;
-                <input type="radio" name="vegetarian" value="N" /> No
+                <input type="radio" name="vegetarian" value="Y" <?php if ($userRow['vegetarian'] == 'Y'): ?> checked <?php endif; ?>/> Yes &nbsp; &nbsp;
+                <input type="radio" name="vegetarian" value="N" <?php if ($userRow['vegetarian'] == 'N'): ?> checked <?php endif; ?>/> No
             </div>
           </div>
         </div>
@@ -182,21 +197,37 @@
         
 
         <div class="answer-section restOfForm">
-          <h3>We'll save your answers to the following questions forever! We're looking for your interesting explanations</h3>
+          <h3>We'll save your answers to the following questions forever! We're looking for some cool stories.</h3>
           
           <div class="row">
             <div class="col-md-5">How and when did you meet Atanaska?</div>
-            <div class="col-md-7"><textarea value="" ></textarea></div>
+            <div class="col-md-7"><textarea name="meetAtanaska"><?php echo $userRow['meetAtanaska']; ?></textarea></div>
           </div>
           <div class="row">
             <div class="col-md-5">How and when did you meet Marin?</div>
-            <div class="col-md-7"><textarea value="" ></textarea></div>
+            <div class="col-md-7"><textarea name="meetMarin"><?php echo $userRow['meetMarin']; ?></textarea></div>
           </div>
         </div>
 
+        <div id="fieldRequiredMessage" class="alert alert-danger" role="alert" style="display: none">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          Please fill out all fields
+        </div>
+        <div id="savedMessage" class="alert alert-success" role="alert" style="display: none">
+          <span class="glyphicon glyphicon glyphicon-saved" aria-hidden="true"></span>
+          <span class="sr-only">Success:</span>
+          Your inputs have been saved!
+        </div>
+
+        <div id="saveFailMessage" class="alert alert-success" role="alert" style="display: none">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          Save Failed. Please email thissitesucks@atanaskaandmarin.com for help.
+        </div>
+        
         <div class="row">
-          <div class="col-md-5"></div>
-          <div class="col-md-7"><button id="rsvpSubmit">Submit Response</button></div>
+          <div class="col-md-12" style="text-align: center;"><button id="rsvpSubmit">Submit Response</button></div>
         </div>
 
       </div>
@@ -411,7 +442,7 @@
   <section id="contact">
     <div id="maps"></div>
     <div class="container">
-      <div class="row">
+    <!--   <div class="row">
         <div class="col-md-12">
           <h2>Contact Us</h2>
           <div class="contact-container">
@@ -420,7 +451,6 @@
               <div class="col-md-6 col-sm-6">
                 <textarea rows="7" class="form-control no-resize" placeholder="Message"></textarea>
               </div>
-              <!-- break -->
 
               <div class="col-md-6 col-sm-6">
                 <input type="text" class="form-control" placeholder="Name">
@@ -432,7 +462,7 @@
           </div>
           <h5><span>~ Thank you ~</span></h5>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
   <!-- end:contact -->
@@ -443,11 +473,12 @@
       <div class="row">
         <div class="col-md-12">
           <h2>Atanaska & Marin</h2>
-          <h3>Yang sangat berbahagia</h3>
+          <h3>Contact us at </h3>
+          <h3>wedding@atanaskaandmarin.com, marinatanaskaandmarin.com, and atanaska@atanaskaandmarin.com</h3>
         </div>
       </div>
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-12">
           <ul class="list-inline social-icon">
             <li><a href="#" class="icon-twitter" rel="tooltip" title="Twitter" data-placement="top"><i class="fa fa-twitter"></i></a></li>
@@ -456,12 +487,19 @@
             <li><a href="#" class="icon-instagram" rel="tooltip" title="Instagram" data-placement="top"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-12">
           <p>Atanaska & Marin's Wedding Invitation built with <i class="fa fa-heart-o"></i> by <a href="http://about.me/avriqq" target="_blank">@avriqq</a></p>
           <p>Copyright &copy; 2014 All Right Reserved.</p>
+        </div>
+      </div> -->
+</br>
+      <div class="row">
+        <div class="col-md-12">
+          <p>Atanaska & Marin's Awesome Wedding Invitation Website</p>
+          <p>Built by Marin. WoooooooHooooooo!</p>
         </div>
       </div>
     </div>

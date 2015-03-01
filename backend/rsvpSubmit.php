@@ -30,13 +30,34 @@ try {
   if (!empty($_POST['meetMarin']))
     $sql .= ', meetMarin=\''.$_POST['meetMarin'].'\'';
 
-  $sql .= 'WHERE email=\''.$_POST['email'].'\'';
+  $sql .= 'WHERE email=\''.$_POST['email'].'\' AND emailOwner = \'Y\'';
 
   mysql_select_db('atanaskaandmarin');
   $retval = mysql_query( $sql, $conn );
   if(! $retval )
   {
     die('{"success": false, "message": "'.mysql_error().'"}');
+  }
+
+  if (!empty($_POST['guests'])) {
+    foreach ($_POST['guests'] as $id => $rsvp) {
+
+      if ($rsvp == 'false') {
+        $rsvp = 'N';
+      }
+      else {
+        $rsvp = 'Y';
+      }
+      $sql = 'UPDATE guests';
+      $sql .= ' SET rsvp=\''.$rsvp.'\' WHERE id=\''.$id.'\'';
+
+      mysql_select_db('atanaskaandmarin');
+      $retval = mysql_query( $sql, $conn );
+      if(! $retval )
+      {
+        die('{"success": false, "message": "'.mysql_error().'"}');
+      }
+    }
   }
   mysql_close($conn);
 

@@ -81,7 +81,7 @@ $(document).ready(function() {
 
 
   if ($('#jump_to_form').length != 0) {
-    window.location.hash = 'jump_to_form';
+    $('#jump_to_form').trigger('click');
   }
 
   $('#rsvp-span').click(function() {
@@ -136,11 +136,20 @@ $(document).ready(function() {
     if (selected.length > 0) {
         selectedVal = selected.val();
     }
+
+    var guests = {};
+    if ($('.rsvp-guest').length > 0) {
+      $('.rsvp-guest').each(function(index) {
+        var id = $(this).data('id');
+        var checked = $(this).is(':checked');
+        guests[id] = checked;
+      })
+    }
     if (selectedVal == "Y") {
 
       if (isEmpty($('#hiddenEmail').val())
       || isEmpty($("input:radio[name=rsvp]:checked").val())
-      || isEmpty($("input:radio[name=bachelorPartyRsvp]:checked").val())
+      || ($("input:radio[name=bachelorPartyRsvp]").length > 0 && isEmpty($("input:radio[name=bachelorPartyRsvp]:checked").val()))
       || ($("input[name=transport]").length > 0 && isEmpty($("input[name=transport]").val()))
       || ($("input[name=arrivalDay]").length > 0 && isEmpty($("input[name=arrivalDay]").val()))
       || ($("input:radio[name=sleepLocation]:checked").length > 0 && isEmpty($("input:radio[name=sleepLocation]:checked").val()))
@@ -160,6 +169,7 @@ $(document).ready(function() {
         vegetarian : $("input:radio[name=vegetarian]:checked").val(),
         meetAtanaska : $("textarea[name=meetAtanaska]").val(),
         meetMarin : $("textarea[name=meetMarin]").val(),
+        guests : guests
       };
     }
 

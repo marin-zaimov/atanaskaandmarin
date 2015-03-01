@@ -69,7 +69,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#home">Home</a></li>
             <?php if ($userRow != null): ?>
-              <li><a href="#rsvp-form">R.S.V.P.</a></li>
+              <li><a id="jump_to_form" href="#rsvp-form">R.S.V.P.</a></li>
             <?php endif; ?>
             <li><a href="#about">About</a></li>
             <li><a href="#ceremony">Ceremony</a></li>
@@ -105,16 +105,11 @@
       </div>
     </section>
     <!-- end:home -->
-     <!-- <a href="http://atanaskaandmarin.com?email=nasi.mircheva@gmail.com">otgovor!</a> -->
-     <!--  begin: rsvp form -->
-
-        <?php if ($userRow != null): ?>
-          <span id='jump_to_form'></span>
-        <?php endif; ?>
+     
+    <!--  begin: rsvp form -->
     <section id="rsvp-form" style="<?php echo ($userRow == null) ? "display:none" : ""; ?>">
     <div class="about-inner">
       <div class="container">
-
 
         <input type="hidden" id="hiddenEmail" value="<?php echo $userRow['email']; ?>" />
 
@@ -140,15 +135,17 @@
             </div>
           <?php endif; ?>
 
+          <?php if (sizeof($userRow['relatedUsers']) > 0): ?>
           <div class="row restOfForm">
             <div class="col-md-5">Which of the following friends will be accompanying you?</div>
             <div class="col-md-7">
-              <input type="checkbox" value="Y"/> Bro1</br>
-              <input type="checkbox" value="Y"/> Bro2</br>
-              <input type="checkbox" value="Y"/> Bro3</br>
+              <?php foreach ($userRow['relatedUsers'] as $guest): ?>
+                <input class="rsvp-guest" type="checkbox" data-id="<?php echo $guest['id']; ?>" value="Y" <?php echo ($guest['rsvp'] == 'Y') ? 'checked' : ''; ?>/> <?php echo $guest['firstName'] . ' ' .$guest['lastName']; ?></br>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>
+        <?php endif; ?>
 
         
 

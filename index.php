@@ -112,6 +112,23 @@
       <div class="container">
 
         <input type="hidden" id="hiddenEmail" value="<?php echo $userRow['email']; ?>" />
+        <h3>Please read the details below before filling out the R.S.V.P form.</h3>
+        <div class="answer-section restOfForm">
+          <h3>Travel details</h3>Answer what you can. You can come back and update this at any time.
+        
+          <?php if ($userRow['bachelorPartyInvited'] == 'N'): ?>
+            <div class="row">
+              <div class="col-md-5">With what transport do you plan on traveling in Bulgaria? (rental car, buses, trains)</div>
+              <div class="col-md-7"><input name="transport" value="<?php echo $userRow['transport']; ?>" type="text"/></div>
+            </div>
+          <?php endif; ?>
+          
+          <div class="row">
+            <div class="col-md-5">What day will you be arriving in Bulgaria? (write date out in whatever format suits your fancy. I was too lazy to put a datepicker in here :)</div>
+            <div class="col-md-7"><input name="arrivalDay" value="<?php echo $userRow['arrivalDay']; ?>" type="text"/></div>
+          </div>
+        </div>
+
 
         <div class="answer-section">
           <h3>R.S.V.P.</h3>

@@ -112,22 +112,111 @@
       <div class="container">
 
         <input type="hidden" id="hiddenEmail" value="<?php echo $userRow['email']; ?>" />
-        <h3>Please read the details below before filling out the R.S.V.P form.</h3>
-        <div class="answer-section restOfForm">
-          <h3>Travel details</h3>Answer what you can. You can come back and update this at any time.
+        <h2>PLEASE READ THE DETAILS BELOW FILLING OUT THE R.S.V.P FROM.</h2>
+        <div class="answer-section">
+          <h3>Location - Hiking Hut “Rai”, Balkan Mountains, Bulgaria</h3>
         
-          <?php if ($userRow['bachelorPartyInvited'] == 'N'): ?>
-            <div class="row">
-              <div class="col-md-5">With what transport do you plan on traveling in Bulgaria? (rental car, buses, trains)</div>
-              <div class="col-md-7"><input name="transport" value="<?php echo $userRow['transport']; ?>" type="text"/></div>
-            </div>
-          <?php endif; ?>
-          
           <div class="row">
-            <div class="col-md-5">What day will you be arriving in Bulgaria? (write date out in whatever format suits your fancy. I was too lazy to put a datepicker in here :)</div>
-            <div class="col-md-7"><input name="arrivalDay" value="<?php echo $userRow['arrivalDay']; ?>" type="text"/></div>
+            <div class="col-md-12">
+              <p>Hiking Hut “Rai” is a 4-5 hour hike into the Bulgarian mountains.</p>
+              <p>There is no road for vehicles up to the wedding location. Everyone must hike up there :)</p>
+              <p>
+              Hiking hut “Rai” is in the Balkan mountains at 1530 meters elevation in the national park Central Balkan.
+              It is beneath the highest peak in the Balkan mountain range, peak Botev at 2376 meters above sea level. It also stands under one of the tallest waterfalls on the Balkan Peninsula. The hut is a 3 story building built in 1935. It contains 120 beds, divided up in rooms of 5, 7, and 10 beds each. There are bathrooms and showers. The building has running water and electricity, but the electricity is from a generator and cannot support everyone’s personal electronics at once.
+              </p>
+            </div>
+
           </div>
         </div>
+
+        <div class="answer-section">
+          <h3>Transport to Bulgaria and Hija Rai</h3>
+        
+          <div class="row">
+            <div class="col-md-12">
+              <p>Fly into Sofia at least one day prior to arriving in Kalofer.</p>
+              <p>For travel in Bulgaria, you have the following options:</p>
+              <ul>
+                <li>Train - trains are pretty frequent in Bulgaria, but are not the fanciest of modes of transport. Good if you want to experience Bulgaria more in depth. Not dangerous apart from the regular precautions to take when traveling through Europe</li>
+                <li>Bus - also very frequent and more reliable than the trains when it comes to being on time.</li>
+                <li>Rental Car - always an option for anyone not from Bulgaria. It is possible to drive in Bulgaria with a US license.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="answer-section">
+          <h3>The hike to Hija Rai</h3>
+        
+          <div class="row">
+            <div class="col-md-12">
+              <p>The only way to the hut is along a well-marked path starting in the earea known as "Panicite", 4 km from the town of Klofer. Panicite is the furthest point that can be reached by car before continuing through the mountain on foot.</p>
+              <p>There is transport from Kalofer to Panicite throughout the day, but it is likely that we'll have organized transport between these towns for all the wedding guests.</p> 
+              <p>The hike itself is usually around 4 hours, although if you're arriving on Saturday, feel free to take longer and enjoy the scenery.</p>
+              <p>NOTE: the hike is not too strenuous, however, YOU MUST ARRIVE AT THE HUT BEFORE NIGHTFALL! It is really easy to gt lost in the woods at night and finding you will be difficult, especially since cell phones loose reception so deep into the mountains.</p>
+              <p>We will have organized groups hiking together led by friends that have been there before. The groups will be formed depending on time off arrival to Kalofer.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="answer-section">
+          <h3>What to bring</h3>
+        
+          <div class="row">
+            <div class="col-md-12">
+              <p>Be prepared for a real multi-day hike into the mountains.</p>
+              <p>Although it is summer, temperatures near the hut can get chilly at night. Even during the day, the weather can change in the mountains in a matter of minutes from sunny to foggy and warm to cold. It is always best to be prepared for any climate. 
+              <p>We recommend you bring the following:</p>
+              <ul>
+                <li>A sturdy backpack. The size will depend on the amount of stuff you plan on bringing.</li>
+                <li>Two pairs of shoes. One for hiking and one for the wedding. Rain can cause you to be really cold at night if you dont have an extra pair of shoes. Ladies: NO HIGH HEELS PLEASE!</li>
+                <li>Sun glasses and hat</li>
+                <li>Headlamp, flashlight or a phone with one, just in case</li>
+                <li>First Aid kit. Band-aids, disinfectant, ibuprofen at a minimum</li>
+                <li>Food for the hike only. Bring light, high calorie foods. Food will be provided for everyone during the stay at the hut.</li>
+                <li>Camera - you will want to take pictures of the scenery. Its not to miss out on.</li>
+                <li>A happy attitude and smiles - mandatory!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="answer-section">
+          <h3>Gifts</h3>
+        
+          <div class="row">
+            <div class="col-md-12">
+              <p>Due to the location, we recommend that you do not carry gifts up the mountain.</p>
+              <p>If you prefer, you can leave us a card with your thoughts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="answer-section">
+          <h3>Dress Code</h3>
+        
+          <div class="row">
+            <div class="col-md-12">
+              <p>Because this is a mountain wedding, dress warm and confortably. During the day, we can expect temperatures 20-30 celcius, but the temperatures can drop significantly in the evening.</p>
+              <p>A button down short with short sleeves for the men and a happy dress for the ladies is more than fancy enough for the ceremony.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="answer-section">
+          <h3>More about the big day</h3>
+        
+          <div class="row">
+            <div class="col-md-12">
+              <p>The ceremony and the celebrations afterwards will be held outdoors.</p>
+              <p>The ceremony will be held in front of the chapel near the hut and the celebrations will be held on the lawn in front of the hut.</p>
+            </div>
+          </div>
+        </div>
+
+
 
 
         <div class="answer-section">
@@ -312,8 +401,8 @@
       <div class="row">
         <div class="col-md-4">
           <img src="img/bottom.png" class="about-img img-responsive">
-          <h2>Wedding Gallery</h2>
-          <p>Here, you can put photos of about couple, prewedd, and many more.</p>
+          <h2>Photo Gallery</h2>
+          <p></p>
         </div>
         <!-- break -->
 
@@ -322,43 +411,101 @@
               <div class="carousel-inner">
                 <div class="item">
                   <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">  
-                      <a href="img/img01.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img01.jpg);"></div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
+                      <a href="img/1.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/1.jpg);"></div>
                       </a>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDownBig">
-                      <a href="img/img02.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img02.jpg);"></div>
+                      <a href="img/2.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/2.jpg);"></div>
                       </a>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
-                      <a href="img/img03.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img03.jpg);"></div>
+                      <a href="img/3.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/3.jpg);"></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
+                      <a href="img/4.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/4.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDownBig">
+                      <a href="img/5.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/5.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
+                      <a href="img/6.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/6.jpg);"></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
+                      <a href="img/10.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/10.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDownBig">
+                      <a href="img/11.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/11.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
+                      <a href="img/12.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/12.jpg);"></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
+                      <a href="img/13.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/13.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDownBig">
+                      <a href="img/14.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/14.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
+                      <a href="img/15.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/15.jpg);"></div>
                       </a>
                     </div>
                   </div>
                 </div>
                 <div class="item active">
                   <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig"> 
-                      <a href="img/img04.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img04.jpg);"></div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
+                      <a href="img/7.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/7.jpg);"></div>
                       </a>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInUpBig">
-                      <a href="img/img05.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img05.jpg);"></div>
+                      <a href="img/8.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/8.jpg);"></div>
                       </a>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
-                      <a href="img/img06.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img06.jpg);"></div>
+                      <a href="img/9.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/9.jpg);"></div>
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
+              
               <a class="left carousel-control" href="#wedding-photo" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
               </a>

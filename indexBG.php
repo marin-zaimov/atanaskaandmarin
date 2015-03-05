@@ -65,15 +65,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#home">Home</a></li>
+            <li class="active"><a href="#home">Начало</a></li>
             <?php if ($userRow != null): ?>
               <li><a id="jump_to_form" href="#rsvp-form">R.S.V.P.</a></li>
             <?php endif; ?>
-            <li><a href="#about">About</a></li>
-            <li><a href="#ceremony">Ceremony</a></li>
-            <li><a href="#photos">Photos</a></li>
-            <li><a href="#story">Story</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">Относно</a></li>
+            <li><a href="#ceremony">Церемония</a></li>
+            <li><a href="#photos">Снимки</a></li>
+            <li><a href="#story">История</a></li>
+            <li><a href="#contact">Контакти</a></li>
             <li title="Switch to English"><a href="index.php" class="flag-a"><img src="img/usa-flag.png" height="35" alt="Switch to English"></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -87,15 +87,15 @@
         <div class="row">
           <div class="col-md-12">
             <h1>Атанаска & Марин</h1>
-          <h3><span>Are getting</span></h3>
+          <h3><span>Ще се</span></h3>
           <!-- <div class="line"><h3>Are getting</h3></div> -->
-          <h2><i class="fa fa-heart-o"></i> MARRIED! <i class="fa fa-heart-o"></i></h2>
-          <h4>And They are pleased to Invite you</h4>
+          <h2><i class="fa fa-heart-o"></i> ЖЕНЯТ! <i class="fa fa-heart-o"></i></h2>
+          <h4>И с удоволствие ви канят да бъдете техни гости</h4>
           <h5><span id="rsvp-span">
             ~ RSVP ~ &nbsp;
             <span style="display:none;" id="rsvp-email-div">
               <input  id="rsvp-input" placeholder="Email" /> &nbsp;
-              <button id="rsvp-go">Go!</button>
+              <button id="rsvp-go">Клик!</button>
             </span>
           </span></h5>
           </div>
@@ -105,7 +105,7 @@
     <!-- end:home -->
 
      <!--  begin: rsvp form -->
-    <section id="rsvp-form" style="<?php echo ($userRow == null) ? "display:none" : ""; ?>">
+    <section id="rsvp-form" style="<?php //echo ($userRow == null) ? "display:none" : ""; ?>">
     <div class="about-inner">
       <div class="container">
 
@@ -116,17 +116,17 @@
           <h3>R.S.V.P.</h3>
 
           <div class="row">
-            <div class="col-md-5">Are you joining Atanaska and Marin on July 12th, 2015?</div>
+            <div class="col-md-5">Ще се присъедините ли към празника на Атанаска и Марин на 12-и Юли 2015?</div>
             <div class="col-md-7">
-              <input type="radio" name="rsvp" value="Y" id="rsvp-radio-yes" <?php if ($userRow['rsvp'] == 'Y'): ?> checked <?php endif; ?>/> Yes &nbsp; &nbsp;
-              <input type="radio" name="rsvp" value="N" id="rsvp-radio-no" <?php if ($userRow['rsvp'] == 'N'): ?> checked <?php endif; ?>/> No
+              <input type="radio" name="rsvp" value="Y" id="rsvp-radio-yes" <?php if ($userRow['rsvp'] == 'Y'): ?> checked <?php endif; ?>/> Да &nbsp; &nbsp;
+              <input type="radio" name="rsvp" value="N" id="rsvp-radio-no" <?php if ($userRow['rsvp'] == 'N'): ?> checked <?php endif; ?>/> Не
             </div>
           </div>
 
 
           <?php if ($userRow['bachelorPartyInvited'] == 'Y'): ?>
             <div class="row restOfForm">
-              <div class="col-md-5">Will you be joining in any bachelor party activities?</div>
+              <div class="col-md-5">Ще се включите ли в ергенското парти?</div>
               <div class="col-md-7">
                 <input type="radio" name="bachelorPartyRsvp" value="Y" <?php if ($userRow['bachelorPartyRsvp'] == 'Y'): ?> checked <?php endif; ?>/> Yes &nbsp; &nbsp;
                 <input type="radio" name="bachelorPartyRsvp" value="N" <?php if ($userRow['bachelorPartyRsvp'] == 'N'): ?> checked <?php endif; ?>/> No
@@ -135,7 +135,7 @@
           <?php endif; ?>
 
           <div class="row restOfForm">
-            <div class="col-md-5">Which of the following friends will be accompanying you?</div>
+            <div class="col-md-5">Кои от поканените ще присъстват?</div>
             <div class="col-md-7">
               <input type="checkbox" value="Y"/> Bro1</br>
               <input type="checkbox" value="Y"/> Bro2</br>
@@ -147,18 +147,23 @@
 
 
         <div class="answer-section restOfForm">
-          <h3>Travel details</h3>Answer what you can. You can come back and update this at any time.
+          <h3>Информация за пътуването</h3>Отговорете на въпросите, на които можете. Можете да се върнете по всяко време и да обновите информацията.
 
           <?php if ($userRow['bachelorPartyInvited'] == 'N'): ?>
             <div class="row">
-              <div class="col-md-5">With what transport do you plan on traveling in Bulgaria? (rental car, buses, trains)</div>
+              <div class="col-md-5">С какъв транспорт планувате да пътувате? (кола, автобус, влак)</div>
               <div class="col-md-7"><input name="transport" value="<?php echo $userRow['transport']; ?>" type="text"/></div>
             </div>
           <?php endif; ?>
 
           <div class="row">
-            <div class="col-md-5">What day will you be arriving in Bulgaria? (write date out in whatever format suits your fancy. I was too lazy to put a datepicker in here :)</div>
-            <div class="col-md-7"><input name="arrivalDay" value="<?php echo $userRow['arrivalDay']; ?>" type="text"/></div>
+            <div class="col-md-5">Кой ден ще пристигнете на хижа Рай?</div>
+            <div class="col-md-7">
+              <select name="arrivalDay" value="<?php echo $userRow['arrivalDay']; ?>"> >
+                <option value="saturday" <?php echo ($userRow['arrivalDay'] == 'saturday') ? 'selected' : ''; ?>> Събота 11.07</option>
+                <option value="sunday" <?php echo ($userRow['arrivalDay'] == 'sunday') ? 'selected' : ''; ?>>Неделя 12.07</option>
+              </select>
+            </div>
           </div>
         </div>
 
@@ -166,24 +171,24 @@
 
 
         <div class="answer-section restOfForm">
-          <h3>Wedding location details</h3>
+          <h3>Информация за местоположението на сватбата</h3>
 
           <div class="row">
-            <div class="col-md-5">Are you sleeping in the hut (bunk bed) or do you have your own tent?</div>
+            <div class="col-md-5">Желаете ли да спите в хижата (легла на 2 етажа) или ще си носите палатка/спален чувал?</div>
             <div class="col-md-7">
-              <input type="radio" name="sleepLocation" value="hut" <?php if ($userRow['sleepLocation'] == 'hut'): ?> checked <?php endif; ?>/> I'm sleeping in the hut. </br>
-              <input type="radio" name="sleepLocation" value="tent" <?php if ($userRow['sleepLocation'] == 'tent'): ?> checked <?php endif; ?>/> I'd like to sleep in my tent even though a bed is provided for me inside.
+              <input type="radio" name="sleepLocation" value="hut" <?php if ($userRow['sleepLocation'] == 'hut'): ?> checked <?php endif; ?>/> Ще спя в хижата. </br>
+              <input type="radio" name="sleepLocation" value="tent" <?php if ($userRow['sleepLocation'] == 'tent'): ?> checked <?php endif; ?>/> Ще спя навън под звездите.
             </div>
           </div>
           <div class="row">
-            <div class="col-md-5">Do you have any food allergies or concerns we should be aware of?</div>
+            <div class="col-md-5">Имате ли някакви хранителни алергии или ограничения?</div>
             <div class="col-md-7"><input name="allergies" value="<?php echo $userRow['allergies']; ?>" type="text"/></div>
           </div>
           <div class="row">
-            <div class="col-md-5">Would you prefer a vegetarian menu?</div>
+            <div class="col-md-5">Предпочитате ли вегетарианско/веганско меню?</div>
             <div class="col-md-7">
-                <input type="radio" name="vegetarian" value="Y" <?php if ($userRow['vegetarian'] == 'Y'): ?> checked <?php endif; ?>/> Yes &nbsp; &nbsp;
-                <input type="radio" name="vegetarian" value="N" <?php if ($userRow['vegetarian'] == 'N'): ?> checked <?php endif; ?>/> No
+                <input type="radio" name="vegetarian" value="Y" <?php if ($userRow['vegetarian'] == 'Y'): ?> checked <?php endif; ?>/> Да &nbsp; &nbsp;
+                <input type="radio" name="vegetarian" value="N" <?php if ($userRow['vegetarian'] == 'N'): ?> checked <?php endif; ?>/> Не
             </div>
           </div>
         </div>
@@ -191,14 +196,14 @@
 
 
         <div class="answer-section restOfForm">
-          <h3>We'll save your answers to the following questions forever! We're looking for some cool stories.</h3>
+          <h3>Ние ще запазим отговорите ви на следващите въпроси завинаги! Очакваме да бъдете искрени и да разкажете весели (или не дотам) истории.</h3>
 
           <div class="row">
-            <div class="col-md-5">How and when did you meet Atanaska?</div>
+            <div class="col-md-5">Как и кога се запознахте с Атанаска?</div>
             <div class="col-md-7"><textarea name="meetAtanaska"><?php echo $userRow['meetAtanaska']; ?></textarea></div>
           </div>
           <div class="row">
-            <div class="col-md-5">How and when did you meet Marin?</div>
+            <div class="col-md-5">Как и кога се запознахте с Марин?</div>
             <div class="col-md-7"><textarea name="meetMarin"><?php echo $userRow['meetMarin']; ?></textarea></div>
           </div>
         </div>
@@ -221,7 +226,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-12" style="text-align: center;"><button id="rsvpSubmit">Submit Response</button></div>
+          <div class="col-md-12" style="text-align: center;"><button id="rsvpSubmit">Изпращане на отговор</button></div>
         </div>
 
       </div>
@@ -236,13 +241,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h2>Atanaska</h2>
-            <p>Atanaska, 21 Tahun. Pria tak tampan yang bercita-cita menjadi jutawan dengan modal pas-pasan.
-            Hobi berenang, menolong teman, sepak bola, main futsal, main PES, dan segala sesuatu tentang bal-balan.
-            Bisanya cuma nyinyir dan komentar, agak sombong tapi nggak arogan. </p>
+            <h2>Атанаска</h2>
+            <p>ТУК ПИШЕШ ТИ!!!
+
+             </p>
             <blockquote>
-              Cinta itu.. jika kamu bilang iya ~ waktu aku bertanya "Maukah kau menikah denganku?" #eeaaa
-              <small>Lorenso</small>
+
+              <small>Марин</small>
             </blockquote>
           </div>
           <!-- break -->
@@ -254,13 +259,13 @@
           <!-- break -->
 
           <div class="col-md-4">
-            <h2>Marin</h2>
-            <p>Marin, 20 Tahun. Wanita periang yang bercita-cita menjadi seorang pendidik dan pengajar.
-            Murah senyum, galak, tapi sangat cengeng. Tinggi, langsing, hidung pesek dan bergingsul.
-            Hobi makan es krim, mie ayam dan ngambek. Care sama temen dan pokoknya lakik #ehh.</p>
-            <blockquote>
-              Cinta itu.. jika kamu langsung datang kerumah dan melamarku ~ #duhh
-              <small>Julia</small>
+            <h2>Марин</h2>
+            <p>Ако има някое място на света, където няма нито един слънчев ден, аз бих го изпратила там, за да стопли сърцата на хората и да огрява деня им с усмивката си. Както огрява моя.
+
+            </p>
+
+            Едва ли има друг мъж, който преди да предложи брак е казал:"Моля те не се шашкай!"
+              <small>Атанаска</small>
             </blockquote>
           </div>
           <!-- break -->
@@ -272,15 +277,15 @@
   <!-- end:about -->
 
   <!-- begin:ceremony -->
-  <section id="ceremony" style="background: url(img/img04.jpg);">
+  <section id="ceremony" style="background: url(img/1.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>The Ceremony</h1>
-          <h3><span>Will Be Held On</span></h3>
-          <h2>12 July, 2013</h2>
+          <h1>Церемонията</h1>
+          <h3><span>Ще се състои на</span></h3>
+          <h2>12-и Юли 2015</h2>
           <!-- <h5><span>~ July ~</span></h5> -->
-          <h4>Chapel next to Hija Rai,  4:00 PM</h4>
+          <h4>Параклиса до хижа Рай,  16:00ч. </h4>
         </div>
       </div>
     </div>
@@ -293,8 +298,8 @@
       <div class="row">
         <div class="col-md-4">
           <img src="img/bottom.png" class="about-img img-responsive">
-          <h2>Wedding Gallery</h2>
-          <p>Here, you can put photos of about couple, prewedd, and many more.</p>
+          <h2>Фото Галерия</h2>
+          <p></p>
         </div>
         <!-- break -->
 
@@ -304,18 +309,37 @@
                 <div class="item">
                   <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
-                      <a href="img/img01.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img01.jpg);"></div>
+                      <a href="img/1.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/1.jpg);"></div>
                       </a>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDownBig">
-                      <a href="img/img02.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img02.jpg);"></div>
+                      <a href="img/2.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/2.jpg);"></div>
                       </a>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
-                      <a href="img/img03.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img03.jpg);"></div>
+                      <a href="img/3.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/3.jpg);"></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
+                      <a href="img/4.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/4.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDownBig">
+                      <a href="img/5.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/5.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
+                      <a href="img/6.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/6.jpg);"></div>
                       </a>
                     </div>
                   </div>
@@ -323,23 +347,61 @@
                 <div class="item active">
                   <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
-                      <a href="img/img04.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img04.jpg);"></div>
+                      <a href="img/7.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/7.jpg);"></div>
                       </a>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInUpBig">
-                      <a href="img/img05.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img05.jpg);"></div>
+                      <a href="img/8.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/8.jpg);"></div>
                       </a>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
-                      <a href="img/img06.jpg" class="gallery-images">
-                        <div class="photo-gallery" style="background: url(img/img06.jpg);"></div>
+                      <a href="img/9.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/9.jpg);"></div>
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="item">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
+                      <a href="img/10.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/10.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDownBig">
+                      <a href="img/11.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/11.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
+                      <a href="img/12.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/12.jpg);"></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
+                      <a href="img/13.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/13.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDownBig">
+                      <a href="img/14.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/14.jpg);"></div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
+                      <a href="img/15.jpg" class="gallery-images">
+                        <div class="photo-gallery" style="background: url(img/15.jpg);"></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               <a class="left carousel-control" href="#wedding-photo" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
               </a>
@@ -467,8 +529,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Atanaska & Marin</h2>
-           <h3>Contact us at </h3>
+          <h2>Атанаска & Марин</h2>
+           <h3>Свържете се с нас на </h3>
            <h3>wedding@atanaskaandmarin.com, marinatanaskaandmarin.com, and atanaska@atanaskaandmarin.com</h3>
         </div>
       </div>
@@ -486,8 +548,8 @@
 
       <div class="row">
         <div class="col-md-12">
-           <p>Atanaska & Marin's Awesome Wedding Invitation Website</p>
-           <p>Built by Marin. WoooooooHooooooo!</p>
+           <p>Страхотния сватбен сайт на Атанаска & Марин</p>
+           <p>Създаден от Марин. ЮююююююХууууууу!</p>
          </div>
       </div>
     </div>

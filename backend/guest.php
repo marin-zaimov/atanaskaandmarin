@@ -13,19 +13,31 @@ function getGuest($email) {
     } 
 
   //TODO(Marin): send back all fields here
-    $sql = "SELECT id, email, firstName, lastName, rsvp, language, emailOwner FROM guests";
+    $sql = "SELECT * FROM guests";
     $result = $conn->query($sql);
 
     $emailToSearchFor = $email;
 
     if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-            // echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-            if ($emailToSearchFor == $row['email']) {
-              return $row;
-            }
+
+      $userToReturn = null;
+      $relatedUsers = array();
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        if ($emailToSearchFor == $row['email']) {
+          if ($row['emailOwner'] == 'Y') {
+            $userToReturn = $row;
+          }
+          else {
+            $relatedUsers[] = $row;
+          }
         }
+      }
+      if ($userToReturn != null) {
+        $userToReturn['relatedUsers'] = $relatedUsers;
+      }
+      return $userToReturn;
+
     } else {
         echo "0 results";
     }

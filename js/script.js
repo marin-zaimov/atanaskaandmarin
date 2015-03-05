@@ -43,7 +43,7 @@ $(document).ready(function() {
 		 map:{
 		    options:{
 		      center:[42.6660438,24.9298189],
-		      zoom: 13,
+		      zoom: 12,
 			  scrollwheel: false
 		    }
  		 },
@@ -73,6 +73,17 @@ $(document).ready(function() {
 
 	});
 
+
+
+
+
+
+
+
+  if ($('#jump_to_form').length != 0) {
+    $('#jump_to_form').trigger('click');
+  }
+
   $('#rsvp-span').click(function() {
     $('#rsvp-email-div').fadeIn();
   })
@@ -83,54 +94,118 @@ $(document).ready(function() {
     $.get( "backend/checkEmail.php?email="+$('#rsvp-input').val(), function( data ) {
       data = jQuery.parseJSON(data);
       if (data.success == true && data.message != "notFound") {
-        populateRsvpForm(data.data);
-        $("#rsvp-form").slideDown();
-        $('#hiddenEmail').val($('#rsvp-input').val());
+        window.location.href = "?email=" + $('#rsvp-input').val();
       }
       else {
-        alert("Incorrect Email");
+        alert("This email is not on our invite list. Please email wedding@atanaskaandmarin.com for help.");
       }
     });
   });
 
   $('#rsvp-radio-yes').click(function() {
-    $('#restOfForm').slideDown();
+    $('.restOfForm').slideDown("fast");
   });
+  $('#rsvp-radio-no').click(function() {
+    $('.restOfForm').slideUp("fast");
+  });
+
   $('#rsvpSubmit').click(function() {
-    //TODO(Marin):add validation to form
-    var formData = gatherFormdata();
+    clearMessages();
+    var formData = gatherFormData();
+    console.log(formData);
+    if (formData == null) {
+      fieldRequiredMessage("Please fill out all fields in the form before submit");
+      return;
+    }
     $.post( "backend/rsvpSubmit.php", formData, function( data ) {
       data = jQuery.parseJSON(data);
       if (data.success == true && data.message == true) {
-        alert("Saved");
+        savedMessage();
       }
       else {
-        alert("Failed to Save");
+        saveFailMessage();
       }
     });
   });
 
-  function populateRsvpForm(data) {
-    console.log(data);
-    //TODO(Marin): populate the form here. Check what type of existing rsvp is, and ask to change response.
-    // if (data.r)
-  }
 
-  function gatherFormdata() {
-//TODO(Marin): get all of the inputs here
-    var selected = $("input[type='radio'][name='going']:checked");
+  function gatherFormData() {
+
+    var selected = $("input[type='radio'][name='rsvp']:checked");
+    
     if (selected.length > 0) {
         selectedVal = selected.val();
     }
+
+    var guests = {};
+    if ($('.rsvp-guest').length > 0) {
+      $('.rsvp-guest').each(function(index) {
+        var id = $(this).data('id');
+        var checked = $(this).is(':checked');
+        guests[id] = checked;
+      })
+    }
+    if (selectedVal == "Y") {
+
+      if (isEmpty($('#hiddenEmail').val())
+      || isEmpty($("input:radio[name=rsvp]:checked").val())
+      || ($("input:radio[name=bachelorPartyRsvp]").length > 0 && isEmpty($("input:radio[name=bachelorPartyRsvp]:checked").val()))
+      || ($("input[name=transport]").length > 0 && isEmpty($("input[name=transport]").val()))
+      || ($("input[name=arrivalDay]").length > 0 && isEmpty($("input[name=arrivalDay]").val()))
+      || ($("input:radio[name=sleepLocation]:checked").length > 0 && isEmpty($("input:radio[name=sleepLocation]:checked").val()))
+      || ($("input[name=allergies]").length > 0 && isEmpty($("input[name=allergies]").val()))
+      || ($("input:radio[name=vegetarian]:checked").length > 0 && isEmpty($("input:radio[name=vegetarian]:checked").val()))
+      ) {
+        return null;
+      }
+      return {
+        email : $('#hiddenEmail').val(),
+        rsvp : $("input:radio[name=rsvp]:checked").val(),
+        bachelorPartyRsvp : $("input:radio[name=bachelorPartyRsvp]:checked").val(),
+        transport : $("input[name=transport]").val(),
+        arrivalDay : $("input[name=arrivalDay]").val(),
+        sleepLocation : $("input:radio[name=sleepLocation]:checked").val(),
+        allergies : $("input[name=allergies]").val(),
+        vegetarian : $("input:radio[name=vegetarian]:checked").val(),
+        meetAtanaska : $("textarea[name=meetAtanaska]").val(),
+        meetMarin : $("textarea[name=meetMarin]").val(),
+        guests : guests
+      };
+    }
+
+    if ((isEmpty($('#hiddenEmail').val()) || isEmpty($("input:radio[name=rsvp]:checked").val()))) {
+      return null;
+    }
     return {
       email: $('#hiddenEmail').val(),
-      going: $("input:radio[name=going]:checked").val()
+      rsvp: $("input:radio[name=rsvp]:checked").val()
     };
   }
 
-  function switchLanguage() {
-    
+  function isEmpty(input) {
+    console.log(input);
+    if (input == "" || input == null || input == undefined) {
+      return true;
+    }
+    return false;
   }
+
+  function clearMessages() {
+    $('#fieldRequiredMessage').hide();
+    $('#savedMessage').hide();
+  }
+  function fieldRequiredMessage(message) {
+    $('#fieldRequiredMessage').show();
+  }
+
+  function savedMessage() {
+    $('#savedMessage').show();
+  }
+
+  function saveFailMessage() {
+    $('#saveFailMessage').show();
+  }
+
 	
 });
 

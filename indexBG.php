@@ -81,7 +81,7 @@
           <h2><i class="fa fa-heart-o"></i> MARRIED! <i class="fa fa-heart-o"></i></h2>
           <h4>And They are pleased to Invite you</h4>
           <h5><span id="rsvp-span">
-            ~ RSVP ~ &nbsp; 
+            ~ RSVP ~ &nbsp;
             <span style="display:none;" id="rsvp-email-div">
               <input  id="rsvp-input" placeholder="Email" /> &nbsp;
               <button id="rsvp-go">Go!</button>
@@ -128,7 +128,7 @@
           <div class="col-md-9"><button id="rsvpSubmit">Submit Response</button></div>
         </div>
       </div>
-      
+
     </div>
   </section>
     <!--  end: rsvp form -->
@@ -206,7 +206,7 @@
               <div class="carousel-inner">
                 <div class="item">
                   <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">  
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInLeftBig">
                       <a href="img/img01.jpg" class="gallery-images">
                         <div class="photo-gallery" style="background: url(img/img01.jpg);"></div>
                       </a>
@@ -225,7 +225,7 @@
                 </div>
                 <div class="item active">
                   <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig"> 
+                    <div class="col-md-4 col-sm-4 col-xs-12 animated fadeInRightBig">
                       <a href="img/img04.jpg" class="gallery-images">
                         <div class="photo-gallery" style="background: url(img/img04.jpg);"></div>
                       </a>
@@ -278,7 +278,7 @@
 
                 <!-- begin:content-photo -->
                 <li class="content-item content-photo">
-                  <img src="img/img05.jpg" alt="ditinggal rabi - together"> 
+                  <img src="img/img05.jpg" alt="ditinggal rabi - together">
                   <p class="caption">At the first date, we ate ice cream and "cemong" together. We enjoyed the evening. Sitting on the bench side of the road. Telling each other silly thing, and I was able to make a little melted. Emm.. I mean make your ice cream melts. :|</p>
                   <time datetime=""><i class="fa fa-calendar"></i> January, 19 2011</time>
                 </li>
@@ -287,7 +287,7 @@
                 <!-- begin:content-photo -->
                 <li class="content-item content-photo">
                   <img src="img/img06.jpg" alt="ditinggal rabi - sleep together">
-                  <time datetime=""><i class="fa fa-calendar"></i> February, 19 2011</time> 
+                  <time datetime=""><i class="fa fa-calendar"></i> February, 19 2011</time>
                 </li>
                 <!-- end:content-photo -->
 
@@ -320,7 +320,7 @@
                 </li>
                 <!-- end:content-photo -->
 
-                
+
               </ul>
             </li>
 
@@ -335,7 +335,7 @@
     </div>
   </section>
   <!-- end:story -->
-  
+
   <!-- begin:contact -->
   <section id="contact">
     <div id="maps"></div>
@@ -406,7 +406,7 @@
      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
     <script src="js/gmap3.js"></script>
     <script src="js/jquery.colorbox.js"></script>
-    <script src="js/jquery.easing.js"></script> 
+    <script src="js/jquery.easing.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

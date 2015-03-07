@@ -112,17 +112,16 @@
 
         <input type="hidden" id="hiddenEmail" value="<?php echo $userRow['email']; ?>" />
 
-        <h2>PLEASE READ THE DETAILS BELOW FILLING OUT THE R.S.V.P FROM.</h2>
+        <h2>МОЛЯ, ПРЕДИ ДА ОТГОВОРИТЕ НА ПОКАНАТА, ПРОЧЕТЕТЕ МНОГО ВНИМАТЕЛНО И ИМАЙТЕ ПРЕДВИД ПОСЛЕДВАЩАТА ИНФОРМАЦИЯ.</h2>
         <div class="answer-section">
-          <h3>Location - Hiking Hut “Rai”, Balkan Mountains, Bulgaria</h3>
-        
+          <h3>Местоположение - Туристическа хижа "Рай”, Стара планина</h3>
+
           <div class="row">
             <div class="col-md-12">
-              <p>Hiking Hut “Rai” is a 4-5 hour hike into the Bulgarian mountains.</p>
-              <p>There is no road for vehicles up to the wedding location. Everyone must hike up there :)</p>
-              <p>
-              Hiking hut “Rai” is in the Balkan mountains at 1530 meters elevation in the national park Central Balkan.
-              It is beneath the highest peak in the Balkan mountain range, peak Botev at 2376 meters above sea level. It also stands under one of the tallest waterfalls on the Balkan Peninsula. The hut is a 3 story building built in 1935. It contains 120 beds, divided up in rooms of 5, 7, and 10 beds each. There are bathrooms and showers. The building has running water and electricity, but the electricity is from a generator and cannot support everyone’s personal electronics at once.
+              <p>До хижата няма път за автомобилен транспорт, като достъпът е възможен само пеша по указаните туристически маршрути. Преходът се прави през деня и е около 4-5 часа пеш.</p>
+              <p></p>Хижа „Рай“ се намира в Стара планина на 1530 м надморска височина, в рамките на Национален парк „Централен Балкан“ и в южното подножие на вр.Ботев - 2376 м. най-високият връх в Стара планина.
+              <p> В близост до хижата се намира най-високият водопад на Балканския полуостров - Райското пръскало 124,5 м.
+              Хижата се състои от масивна триетажна сграда, построена през 1935 г. и разполага със 120 легла, разпределени в стаи с по 5, 7, 10 и повече легла (повечето от тях двуетажни), с вътрешни и външни санитарни възли и външна баня. Сградата е водоснабдена, електрифицирана от собствен генератор.
               </p>
             </div>
 
@@ -130,16 +129,16 @@
         </div>
 
         <div class="answer-section">
-          <h3>Transport to Bulgaria and Hija Rai</h3>
-        
+          <h3>Транспорт</h3>
+
           <div class="row">
             <div class="col-md-12">
-              <p>Fly into Sofia at least one day prior to arriving in Kalofer.</p>
-              <p>For travel in Bulgaria, you have the following options:</p>
+              <p>Началната точка за изкачването е местността "Паниците" на 4км. от гр.Калофер.</p>
+              <p>Транспорт, с който може да стигнете до гр.Калофер:</p>
               <ul>
-                <li>Train - trains are pretty frequent in Bulgaria, but are not the fanciest of modes of transport. Good if you want to experience Bulgaria more in depth. Not dangerous apart from the regular precautions to take when traveling through Europe</li>
-                <li>Bus - also very frequent and more reliable than the trains when it comes to being on time.</li>
-                <li>Rental Car - always an option for anyone not from Bulgaria. It is possible to drive in Bulgaria with a US license.</li>
+                <li>Автомобил</li>
+                <li>Влак - Разписанието на влаковете можете да намерите на сайта на БДЖ.</li>
+                <li>Автобус.</li>
               </ul>
             </div>
 
@@ -147,71 +146,72 @@
         </div>
 
         <div class="answer-section">
-          <h3>The hike to Hija Rai</h3>
-        
+          <h3>Изкачване до хижа Рай</h3>
+
           <div class="row">
             <div class="col-md-12">
-              <p>The only way to the hut is along a well-marked path starting in the earea known as "Panicite", 4 km from the town of Klofer. Panicite is the furthest point that can be reached by car before continuing through the mountain on foot.</p>
-              <p>There is transport from Kalofer to Panicite throughout the day, but it is likely that we'll have organized transport between these towns for all the wedding guests.</p> 
-              <p>The hike itself is usually around 4 hours, although if you're arriving on Saturday, feel free to take longer and enjoy the scenery.</p>
-              <p>NOTE: the hike is not too strenuous, however, YOU MUST ARRIVE AT THE HUT BEFORE NIGHTFALL! It is really easy to gt lost in the woods at night and finding you will be difficult, especially since cell phones loose reception so deep into the mountains.</p>
-              <p>We will have organized groups hiking together led by friends that have been there before. The groups will be formed depending on time off arrival to Kalofer.</p>
+              <p>До хижата се стига по добре маркирана пътека, която започва от местността “Паниците” на 4 км. от град Калофер по поречието на река Тунджа.</p>
+              <p>“Паниците” е крайната точка до която можете да се стигне с автомобил, след което ще трябва да продължите през пределите на Централен Балкан пеша. Има възможност за транспорт от гарата или от града до местността с микробус (проверете в сайта на гр. Калофер или се свържете с нас).</p>
+              <p>Преходът обикновено е около 4 часа пеш, но ако сте там в събота няма да има за къде да бързате и без притеснение ще можете да си почивате, колкото често решите.</p>
+              <p>НО ТРЯБВА ДА ПРИСТИГНЕТЕ В ХИЖАТА ПРЕДИ ЗАЛЕЗ В СЪБОТА 11.07 ИЛИ ДО ОБЯД В НЕДЕЛЯ 12.07! През нощта е лесно да се загубите в планината и би било много трудно да ви открием при положение, че телефоните губят обхват.</p>
+              <p>Самото изкачване ще бъде организирано от нас на групи с предварително определен водач-сватбар, който е преминавал маршрута. Този преход по принцип няма нужда от водач, но не бихме искали да загубим ценни сватбари в планината. Групите ще се сформират в зависимост от транспорта, който изберете и времето ви на пристигане. Ако вече сте минавали този преход и не желаете водач, може да ни улесните и вие самите да бъдете такъв.</p>
             </div>
           </div>
         </div>
 
 
         <div class="answer-section">
-          <h3>What to bring</h3>
-        
+          <h3>Екипировка</h3>
+
           <div class="row">
             <div class="col-md-12">
-              <p>Be prepared for a real multi-day hike into the mountains.</p>
-              <p>Although it is summer, temperatures near the hut can get chilly at night. Even during the day, the weather can change in the mountains in a matter of minutes from sunny to foggy and warm to cold. It is always best to be prepared for any climate. 
-              <p>We recommend you bring the following:</p>
+              <p>Дядо Парашкева казваше: “Не тръгвай лятно време без абичка, зимно време без торбичка!”</p>
+              <p>Желателно е да бъдете подготвени за изкачване в планински условия. Макар и през лятото в планината времето се променя много бързо от слънчево към мъгливо и от топло към студено.
+              <p>Препоръчваме ви да сте екипирани с:</p>
               <ul>
-                <li>A sturdy backpack. The size will depend on the amount of stuff you plan on bringing.</li>
-                <li>Two pairs of shoes. One for hiking and one for the wedding. Rain can cause you to be really cold at night if you dont have an extra pair of shoes. Ladies: NO HIGH HEELS PLEASE!</li>
-                <li>Sun glasses and hat</li>
-                <li>Headlamp, flashlight or a phone with one, just in case</li>
-                <li>First Aid kit. Band-aids, disinfectant, ibuprofen at a minimum</li>
-                <li>Food for the hike only. Bring light, high calorie foods. Food will be provided for everyone during the stay at the hut.</li>
-                <li>Camera - you will want to take pictures of the scenery. Its not to miss out on.</li>
-                <li>A happy attitude and smiles - mandatory!</li>
+                <li>Здрава подходяща раница. Големината зависи изцяло от това какво и колко можете да носите и дали ви е нужно.</li>
+                <li>Два чифта обувки - за ходенето по време на прехода и подходящи за сватбата. Обувките за прехода - колкото по-леки, толкова по-добре, летни планинарски или по-здрави маратонки, но глезена да е обхванат (по възможност). Тъй като ще е средата на лятото желателно е да си носите и чифт джапанки - за банята или просто да ви отпочиват краката от обувките. Обувките за сватбата - здрави, с равни подметки, за тропане на хора (може и сандали). За дамите - моля, ако сте подбрали обувки на тънък или висок ток за сватбата, помислете пак.</li>
+                <li>Поне 1 пуловер или полар, 1 яке подходящо за дъжд или вятър, 1 дъждобран.</li>
+                <li>Слънчеви очила, шапка, слънцезащитен крем, челник или фенерче.</li>
+                <li>Палатка и/или спален чувал, шалте - само в случай, че не възнамерявате да спите в хижата.</li>
+                <li>Аптечка - ако пиете някакви лекарства или имате алергии, които могат да се обострят, не забравяйте да вземете нужните медикаменти с вас. Лепенки - особено, ако обувките ви са нови. Препарат против комари.</li>
+                <li>Храна - за прехода задължително си носете поне сандвичи, ядки, солети, бисквити, малко вода (по маршрута има чешми). Хижата разполага с кухня.</li>
+                <li>Фотоапарат - ще има прекрасни гледки, които ще поискате да заснемете.</li>
+                <li>Добро настроение и усмивки - задължителни!</li>
               </ul>
             </div>
           </div>
         </div>
 
         <div class="answer-section">
-          <h3>Gifts</h3>
-        
+          <h3>Подаръци за младоженците</h3>
+
           <div class="row">
             <div class="col-md-12">
-              <p>Due to the location, we recommend that you do not carry gifts up the mountain.</p>
-              <p>If you prefer, you can leave us a card with your thoughts.</p>
+              <p>Поради местоположението на събитието и начина на стигане до там, силно ви препоръчваме да не носите каквито и да е подаръци с вас.</p>
+              <p>Ако желаете, след церемонията можете да ни изкажете своите благопожелания с картички или пликове в специално поставена за целта кутия.</p>
             </div>
           </div>
         </div>
 
         <div class="answer-section">
-          <h3>Dress Code</h3>
-        
+          <h3>Какво да облечете или така наречения “дрес код”</h3>
+
           <div class="row">
             <div class="col-md-12">
-              <p>Because this is a mountain wedding, dress warm and confortably. During the day, we can expect temperatures 20-30 celcius, but the temperatures can drop significantly in the evening.</p>
-              <p>A button down short with short sleeves for the men and a happy dress for the ladies is more than fancy enough for the ceremony.</p>
+              <p>Тъй като е “планинска сватба” нещо леко и удобно.Имайте предвид, че през нощта температурите падат значително. Самото място не предполага гостите да бъдат строго официални - летен костюм, риза с къс ръкав и панталон или свежа рокля са напълно достатъчни (без бели рокли, дами, младоженецът може да се обърка - жени се за първи път).</p>
             </div>
           </div>
         </div>
 
         <div class="answer-section">
-          <h3>More about the big day</h3>
-        
+          <h3>Още за голямото събитие</h3>
+
           <div class="row">
             <div class="col-md-12">
-              <p>The ceremony and the celebrations afterwards will be held outdoors.</p>
-              <p>The ceremony will be held in front of the chapel near the hut and the celebrations will be held on the lawn in front of the hut.</p>
+              <p>Церемонията, както и празненството след нея, ще бъдат навън (при подходящи метереологични условия).</p>
+              <p>Венчавката ще се състои в неделя следобед до параклиса в близост до хижата, а празненството на поляната пред хижа Рай.</p>
+              <p>Присъствието на децата е силно желано от нас.</p>
             </div>
           </div>
         </div>
@@ -512,7 +512,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <a class="left carousel-control" href="#wedding-photo" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
               </a>

@@ -105,7 +105,7 @@
     <!-- end:home -->
 
      <!--  begin: rsvp form -->
-    <section id="rsvp-form" style="<?php //echo ($userRow == null) ? "display:none" : ""; ?>">
+    <section id="rsvp-form" style="<?php echo ($userRow == null) ? "display:none" : ""; ?>">
     <div class="about-inner">
       <div class="container">
 
@@ -219,7 +219,7 @@
 
 
 
-        
+
         <div class="answer-section">
           <h3>R.S.V.P.</h3>
 

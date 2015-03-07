@@ -539,47 +539,100 @@
               </h3>
               <ul>
                 <!-- begin:content-text -->
-                <li class="content-item content-text">
-                  <h3>Hae :"></h3>
-                  <div class="text">I meet you at the first time. I smile, and you don't smile back to me. I was silent, and you laugh out loud alone. I'ts so fuck'in romantic epic. :))</div>
-                  <time datetime=""><i class="fa fa-calendar"></i> December, 19 2010</time>
+                <li class="content-item content-photo">
+                  <h3>Запознанство:</h3>
+                  <img src="img/1.jpg" alt="">
+                  <time datetime=""><i class="fa fa-calendar"></i> 12 юли 2012 пред хижа Рай</time>
                 </li>
                 <!-- end:content-text -->
 
                 <!-- begin:content-photo -->
-                <li class="content-item content-photo">
-                  <img src="img/img05.jpg" alt="ditinggal rabi - together">
-                  <p class="caption">At the first date, we ate ice cream and "cemong" together. We enjoyed the evening. Sitting on the bench side of the road. Telling each other silly thing, and I was able to make a little melted. Emm.. I mean make your ice cream melts. :|</p>
-                  <time datetime=""><i class="fa fa-calendar"></i> January, 19 2011</time>
+                <li class="content-item content-text">
+                  <h3>Как се стигна до там:</h3>
+                  <p class="caption">Всяко лято, когато Tой се прибира в България организира поход с приятели до хижа Рай (където са се запознали родителите му!). Тя, никога дотогава не е ходила там, но две седмици по-рано заедно с нейн познат вземат на стоп Алекс, приятел на Марин, който ги кани да отидат на планина заедно. Тя решава да отиде и се качва сама на нощния влак от Варна за Калофер в 3 сутринта. След изкачването се запознават пред хижата.</p>
+                  <time datetime=""><i class="fa fa-calendar"></i> 12 юли 2012</time>
                 </li>
                 <!-- end:content-photo -->
 
-                <!-- begin:content-photo -->
-                <li class="content-item content-photo">
-                  <img src="img/img06.jpg" alt="ditinggal rabi - sleep together">
-                  <time datetime=""><i class="fa fa-calendar"></i> February, 19 2011</time>
+                <!-- begin:content-text -->
+                <li class="content-item content-text">
+                  <h3>Първи думи, които той чува от нея:</h3>
+                  <div class="text">Мръснишки виц, който тя е обещала да разкаже, ако й стига въздуха качи ли се до хижата (последван от вица за коньовете!)</div>
+                  <time datetime=""><i class="fa fa-calendar"></i> 12 юли 2012</time>
                 </li>
-                <!-- end:content-photo -->
+                <!-- end:content-text -->
+
+                <!-- begin:content-text -->
+                <li class="content-item content-text">
+                  <h3>Първото, с което тя е впечатлена от него</h3>
+                  <div class="text">Че държи на думата си. Същия ден тя споделя, че иска да се научи да прави стойка на глава, той казва, че ще й покаже как. И го прави няколко часа по късно, когато тя вече е забравила, че са говорили за това.</div>
+                  <img src="img/13.jpg" alt="">
+                  <time datetime=""><i class="fa fa-calendar"></i> 12 юли 2012</time>
+                </li>
+                <!-- end:content-text -->
+
+
+                <!-- begin:content-text -->
+                <li class="content-item content-text">
+                  <h3>Първа НЕсреща:</h3>
+                  <div class="text">Той й отива на гости във Варна (под предекст, че е там заради плажния волейбол). Тя го извежда на разходка по плажната алея, вечерят в тих ресторант с прехвърчащи лястовички над главите им. Тя за първи път осъзнава, че той се опитва да хване ръката й. Същата вечер двамата се съгласяват, че е безмислено между тях да се случва каквото и да е и че връзката от разстояние никога не работи…</div>
+                  <time datetime=""><i class="fa fa-calendar"></i> 31 юли 2012</time>
+                </li>
+                <!-- end:content-text -->
+
+                <!-- begin:content-text -->
+                <li class="content-item content-text">
+                  <div class="text">След като са се чували всеки ден по скайп, той най-накрая я пита дали не иска да имат връзка от разстояние :)</div>
+                  <time datetime=""><i class="fa fa-calendar"></i> 9 октомври 2012</time>
+                </li>
+                <!-- end:content-text -->
+
+                <!-- begin:content-text -->
+                <li class="content-item content-text">
+                  <h3>Техният пръв танц:</h3>
+                  <div class="text">Elvis Presley - Can’t help falling in love with you</div>
+                  <time datetime=""><i class="fa fa-calendar"></i> 15 август 2013, Прага</time>
+                </li>
+                <!-- end:content-text -->
+
+                <!-- begin:content-text -->
+                <li class="content-item content-text">
+                  <h3>Предложението:</h3>
+                  <div class="text">Elvis Presley - Can’t help falling in love with you</div>
+                  <time datetime=""><i class="fa fa-calendar"></i> 15 август 2013, Прага</time>
+                </li>
+                <!-- end:content-text -->
+
+  
+
+След което казва: 
+ 
+
+
+
+
 
                 <!-- begin:content-chat -->
                 <li class="content-item content-chat">
-                  <p class="text chat odd">A : Sist..</p>
-                  <p class="text chat even">B : Yeah..</p>
-                  <p class="text chat odd">A : Sist..</p>
-                  <p class="text chat even">B : Yeahh broth..</p>
-                  <p class="text chat odd">A : Would you be..</p>
-                  And then silence....
-                  <time datetime=""><i class="fa fa-calendar"></i> March, 26 2011</time>
+                  <h3>Предложението:</h3>
+                  <p class="text chat odd">Глория: “Наси не искаш ли с Марин да се ожените?”</p>
+                  <div class="text">Тя казва не. Той стои до нея с пръстен в джоба, изражението на лицето му - безценно. Обяснението й - той е с 4 години по-млад, не иска да го притиска да прави нещо, за което не е готов. Следобед същия ден върху скалите на брега на океана той произнася реч, която я кара да си мисли, че къса с нея. </div>
+                  <p class="text chat even">Той: “Моля те не се шашкай!” пада на едно коляно и я пита: “Ще се омъжиш ли за мен?”</p>
+                  <div class="text">Тя казва да.</div>
+                  <p class="text chat even">Той: “Харесва ли ти пръстена?</p>
+                  <p class="text chat odd">Тя: “Никога не съм го знаела, но винаги точно, такъв съм искала.”</p>
+                  
+                  <time datetime=""><i class="fa fa-calendar"></i> 16-ти февруари 2013, Калифорния</time>
                 </li>
                 <!-- end:content-chat -->
 
                 <!-- begin:content-quote -->
-                <li class="content-item content-quote">
+                <!-- <li class="content-item content-quote">
                   <blockquote>
                     <p>I do not promise anything, I can only promise one thing. I would still handsome until tomorrow... <small>avriqq</small></p>
                     <time datetime=""><i class="fa fa-calendar"></i> March, 26 2013</time>
                   </blockquote>
-                </li>
+                </li> -->
                 <!-- end:content-quote -->
 
                 <!-- begin:content-photo -->

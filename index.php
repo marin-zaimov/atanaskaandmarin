@@ -113,12 +113,13 @@
 
         <input type="hidden" id="hiddenEmail" value="<?php echo $userRow['email']; ?>" />
         <h2>PLEASE READ THE DETAILS BELOW FILLING OUT THE R.S.V.P FROM.</h2>
+        
         <div class="answer-section">
-          <h3>Location - Hiking Hut “Rai”, Balkan Mountains, Bulgaria</h3>
+          <h3>Location - Hiking Hut “Hija Rai”, Balkan Mountains, Bulgaria</h3>
         
           <div class="row">
             <div class="col-md-12">
-              <p>Hiking Hut “Rai” is a 4-5 hour hike into the Bulgarian mountains.</p>
+              <p>Hiking Hut “Hija Rai” is a 4-5 hour hike into the Bulgarian mountains.</p>
               <p>There is no road for vehicles up to the wedding location. Everyone must hike up there :)</p>
               <p>
               Hiking hut “Rai” is in the Balkan mountains at 1530 meters elevation in the national park Central Balkan.
@@ -587,7 +588,7 @@
                 <!-- begin:content-chat -->
                 <li class="content-item content-chat">
                   <h3>The proposal:</h3>
-                  <p class="text chat even">Gloria: “Nasi, have you and Marin thought about getting married?”</p>
+                  <p class="text chat even">Gloria: “Nasi, have you thought about getting married to Marin?”</p>
                   <div class="text">She says no. He's standing next to her with the ring in His pocket. His expression - priceless. Her explanation - he is 4 years younger and she doesnt want to rush him into anything he's not ready for.</div>
                   <img src="img/11.jpg" alt="">
                   <time datetime=""><i class="fa fa-calendar"></i> 16 February 2013, California</time>

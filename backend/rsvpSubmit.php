@@ -29,7 +29,15 @@ try {
     $sql .= ', meetAtanaska=\''.$_POST['meetAtanaska'].'\'';
   if (!empty($_POST['meetMarin']))
     $sql .= ', meetMarin=\''.$_POST['meetMarin'].'\'';
-
+  $nightsToStay = '';
+  if (!empty($_POST['nightsToStay'])) {
+    foreach ($_POST['nightsToStay'] as $night => $stayBoolean) {
+      if ($stayBoolean == 'true') {
+        $nightsToStay .= $night;
+      }
+    }
+  }
+  $sql .= ', nightsToStay=\''.$nightsToStay.'\'';
   $sql .= 'WHERE email=\''.$_POST['email'].'\' AND emailOwner = \'Y\'';
 
   mysql_select_db('atanaskaandmarin');

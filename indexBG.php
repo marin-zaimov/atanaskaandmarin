@@ -28,6 +28,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 
+
     <link href="css/marin.css" rel="stylesheet">
     <link href="css/marinBG.css" rel="stylesheet">
 
@@ -63,7 +64,7 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="adventure collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#home">Начало</a></li>
             <?php if ($userRow != null): ?>
@@ -82,11 +83,11 @@
     <!-- end:navbar -->
 
     <!-- begin:home -->
-    <section id="home" style="background: url(img/img01.jpg);">
+    <section id="home" style="background-image: url(img/surce.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Атанаска & Марин</h1>
+            <h1 class="adventure" style="color: #CCC">Атанаска & Марин</h1>
           <h3><span>Ще се</span></h3>
           <!-- <div class="line"><h3>Are getting</h3></div> -->
           <h2><i class="fa fa-heart-o"></i> ЖЕНЯТ! <i class="fa fa-heart-o"></i></h2>
@@ -291,6 +292,13 @@
             </div>
           </div>
           <div class="row">
+            <div class="col-md-5">Кои вечери ще нощувате в хижата?</div>
+            <div class="col-md-7">
+              <input type="checkbox" name="nightsToStaySat" <?php echo (strpos($userRow['nightsToStay'], "Sat") === false) ? '' : 'checked'; ?>/> събота </br>
+              <input type="checkbox" name="nightsToStaySun" <?php echo (strpos($userRow['nightsToStay'], "Sun") === false) ? '' : 'checked'; ?>/> неделя
+              </div>
+          </div>
+          <div class="row">
             <div class="col-md-5">Имате ли някакви хранителни алергии или ограничения?</div>
             <div class="col-md-7"><input name="allergies" value="<?php echo $userRow['allergies']; ?>" type="text"/></div>
           </div>
@@ -336,7 +344,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-12" style="text-align: center;"><button id="rsvpSubmit">Изпращане на отговор</button></div>
+          <div class="col-md-12" style="text-align: center;"><button id="rsvpSubmit">Изпращане на Oтговор</button></div>
         </div>
 
       </div>
@@ -352,28 +360,34 @@
         <div class="row">
           <div class="col-md-4">
             <h2>Атанаска</h2>
-            <p>ТУК ПИШЕШ ТИ!!!
+<!--             <p>ТУК ПИШЕШ ТИ!!!
 
-             </p>
+             </p> -->
             <blockquote>
-
+            Наси е най-душевно красивият човек с който съм се запознавал.
+            </br>
+            Не е имало друг който да ме задължи да спра какво правя и да въвря сума време за да ми покаже "нешо важно" и като стигнем там да ми посочи страхотна луна или залез с пълна усмивка на лице.
+            </br>
+            Тя кара тези около нея да не забравят за важните и красивите неща в живота.
               <small>Марин</small>
             </blockquote>
           </div>
           <!-- break -->
 
           <div class="col-md-4">
-            <div class="about-img-container" style="background: url(img/img05.jpg) center;"></div>
+            <div class="about-img-container" style="background-image: url(img/13.jpg); background-position: -15px 3px;"></div>
             <img src="img/bottom.png" class="about-img img-responsive">
           </div>
           <!-- break -->
 
           <div class="col-md-4">
             <h2>Марин</h2>
-            <p>Ако има някое място на света, където няма нито един слънчев ден, аз бих го изпратила там, за да стопли сърцата на хората и да огрява деня им с усмивката си. Както огрява моя.
+            <!-- <p>
 
-            </p>
-
+            </p> -->
+            <blockquote>
+            "Ако има някое място на света, където няма нито един слънчев ден, аз бих го изпратила там, за да стопли сърцата на хората и да огрява деня им с усмивката си. Както огрява моя."
+            </br>
             Едва ли има друг мъж, който преди да предложи брак е казал:"Моля те не се шашкай!"
               <small>Атанаска</small>
             </blockquote>
@@ -387,7 +401,7 @@
   <!-- end:about -->
 
   <!-- begin:ceremony -->
-  <section id="ceremony" style="background: url(img/1.jpg);">
+  <section id="ceremony" style="background: url(img/1.jpg);" class="adventure">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -408,7 +422,7 @@
       <div class="row">
         <div class="col-md-4">
           <img src="img/bottom.png" class="about-img img-responsive">
-          <h2>Фото Галерия</h2>
+          <h2 class="adventure">Фото Галерия</h2>
           <p></p>
         </div>
         <!-- break -->
@@ -531,11 +545,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>The Story</h2>
+          <h2>Нашата История</h2>
           <ul class="content">
             <li>
               <h3 class="content-avatar avatar-top">
-                <div class="img-avatar" style="background: url(img/img08.jpg);"></div>
+                <div class="img-avatar" style="background-image: url(img/18.jpg); background-position: 0px -28px;"></div>
               </h3>
               <ul>
                 <!-- begin:content-text -->
@@ -554,38 +568,23 @@
                 </li>
                 <!-- end:content-photo -->
 
-                <!-- begin:content-text -->
-                <li class="content-item content-text">
-                  <h3>Първи думи, които той чува от нея:</h3>
-                  <div class="text">Мръснишки виц, който тя е обещала да разкаже, ако й стига въздуха качи ли се до хижата (последван от вица за коньовете!)</div>
-                  <time datetime=""><i class="fa fa-calendar"></i> 12 юли 2012</time>
-                </li>
-                <!-- end:content-text -->
-
-                <!-- begin:content-text -->
-                <li class="content-item content-text">
-                  <h3>Първото, с което тя е впечатлена от него</h3>
-                  <div class="text">Че държи на думата си. Същия ден тя споделя, че иска да се научи да прави стойка на глава, той казва, че ще й покаже как. И го прави няколко часа по късно, когато тя вече е забравила, че са говорили за това.</div>
-                  <img src="img/13.jpg" alt="">
-                  <time datetime=""><i class="fa fa-calendar"></i> 12 юли 2012</time>
-                </li>
-                <!-- end:content-text -->
-
 
                 <!-- begin:content-text -->
                 <li class="content-item content-text">
                   <h3>Първа НЕсреща:</h3>
-                  <div class="text">Той й отива на гости във Варна (под предекст, че е там заради плажния волейбол). Тя го извежда на разходка по плажната алея, вечерят в тих ресторант с прехвърчащи лястовички над главите им. Тя за първи път осъзнава, че той се опитва да хване ръката й. Същата вечер двамата се съгласяват, че е безмислено между тях да се случва каквото и да е и че връзката от разстояние никога не работи…</div>
-                  <time datetime=""><i class="fa fa-calendar"></i> 31 юли 2012</time>
+                  <img src="img/16.jpg" alt="">
+                  <time datetime=""><i class="fa fa-calendar"></i> 31 юли 2012, Варна</time>
                 </li>
                 <!-- end:content-text -->
 
                 <!-- begin:content-text -->
                 <li class="content-item content-text">
-                  <div class="text">След като са се чували всеки ден по скайп, той най-накрая я пита дали не иска да имат връзка от разстояние :)</div>
-                  <time datetime=""><i class="fa fa-calendar"></i> 9 октомври 2012</time>
+                  <h3>Първа среща:</h3>
+                  <img src="img/17.jpg" alt="">
+                  <time datetime=""><i class="fa fa-calendar"></i> 2 август 2012, Варна</time>
                 </li>
                 <!-- end:content-text -->
+
 
                 <!-- begin:content-text -->
                 <li class="content-item content-text">
@@ -595,53 +594,27 @@
                 </li>
                 <!-- end:content-text -->
 
-                <!-- begin:content-text -->
-                <li class="content-item content-text">
-                  <h3>Предложението:</h3>
-                  <div class="text">Elvis Presley - Can’t help falling in love with you</div>
-                  <time datetime=""><i class="fa fa-calendar"></i> 15 август 2013, Прага</time>
-                </li>
-                <!-- end:content-text -->
-
-  
-
-След което казва: 
- 
-
-
 
 
 
                 <!-- begin:content-chat -->
                 <li class="content-item content-chat">
                   <h3>Предложението:</h3>
-                  <p class="text chat odd">Глория: “Наси не искаш ли с Марин да се ожените?”</p>
-                  <div class="text">Тя казва не. Той стои до нея с пръстен в джоба, изражението на лицето му - безценно. Обяснението й - той е с 4 години по-млад, не иска да го притиска да прави нещо, за което не е готов. Следобед същия ден върху скалите на брега на океана той произнася реч, която я кара да си мисли, че къса с нея. </div>
-                  <p class="text chat even">Той: “Моля те не се шашкай!” пада на едно коляно и я пита: “Ще се омъжиш ли за мен?”</p>
-                  <div class="text">Тя казва да.</div>
-                  <p class="text chat even">Той: “Харесва ли ти пръстена?</p>
-                  <p class="text chat odd">Тя: “Никога не съм го знаела, но винаги точно, такъв съм искала.”</p>
-                  
+                  <p class="text chat even">Глория: “Наси не искаш ли с Марин да се ожените?”</p>
+                  <div class="text">Тя казва не. Той стои до нея с пръстен в джоба, изражението на лицето му - безценно. Обяснението й - той е с 4 години по-млад, не иска да го притиска да прави нещо, за което не е готов.</div>
+                  <img src="img/11.jpg" alt="">
                   <time datetime=""><i class="fa fa-calendar"></i> 16-ти февруари 2013, Калифорния</time>
                 </li>
                 <!-- end:content-chat -->
 
-                <!-- begin:content-quote -->
-                <!-- <li class="content-item content-quote">
-                  <blockquote>
-                    <p>I do not promise anything, I can only promise one thing. I would still handsome until tomorrow... <small>avriqq</small></p>
-                    <time datetime=""><i class="fa fa-calendar"></i> March, 26 2013</time>
-                  </blockquote>
-                </li> -->
-                <!-- end:content-quote -->
-
-                <!-- begin:content-photo -->
-                <li class="content-item content-photo">
-                  <img src="img/img07.jpg" alt="ditinggal rabi - wedding ring">
-                  <p class="caption">And finally, we are now getting married. :')</p>
-                  <time datetime=""><i class="fa fa-calendar"></i> March, 26 2016</time>
+                <!-- begin:content-chat -->
+                <li class="content-item content-chat">
+                  <h3>Решение къде ще бъде сватбата:</h3>
+                  <div class="text">Същия ден, лежейки в хамак между вековните калифорнийски дървета, решават че сватбата ще бъде на същото място където са се запознали, на същият ден в годината.</div>
+                  <img src="img/19.jpg" alt="">
+                  <time datetime=""><i class="fa fa-calendar"></i> 16-ти февруари 2013, Калифорния</time>
                 </li>
-                <!-- end:content-photo -->
+                <!-- end:content-chat -->
 
 
               </ul>
@@ -649,7 +622,7 @@
 
             <li class="content-end">
               <h3 class="content-avatar avatar-end">
-                <div class="img-avatar" style="background: url(img/avatar.png);"></div>
+                <div class="img-avatar" style="background-image: url(img/12.jpg); background-position: -36px 0px;"></div>
               </h3>
             </li>
           </ul>
@@ -731,5 +704,29 @@
     <script src="js/jquery.colorbox.js"></script>
     <script src="js/jquery.easing.js"></script>
     <script src="js/script.js"></script>
+
+    <script src="http://cufon.shoqolate.com/js/cufon-yui.js" type="text/javascript"></script>
+    <script src="js/adventure.cufonfonts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      $('#rsvp-form').find('h2').addClass('adventure');
+      $('#rsvp-form').find('h1').addClass('adventure');
+      $('#rsvp-form').find('h3').addClass('adventure');
+
+
+      $('#story').find('h2').addClass('adventure');
+      $('#story').find('h1').addClass('adventure');
+      $('#story').find('h3').addClass('adventure');
+
+      $('#story').find('h3').addClass('adventure');
+
+      $('#copyright').find('h2').addClass('adventure');
+
+      $('#about').find('h2').addClass('adventure');
+
+      Cufon.replace('.adventure', { fontFamily: 'Adventure', hover: true }); 
+    });
+    </script>
+
   </body>
 </html>

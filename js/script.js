@@ -151,7 +151,7 @@ $(document).ready(function() {
       || isEmpty($("input:radio[name=rsvp]:checked").val())
       || ($("input:radio[name=bachelorPartyRsvp]").length > 0 && isEmpty($("input:radio[name=bachelorPartyRsvp]:checked").val()))
       || ($("input[name=transport]").length > 0 && isEmpty($("input[name=transport]").val()))
-      || ($("input[name=arrivalDay]").length > 0 && isEmpty($("input[name=arrivalDay]").val()))
+      || ($("[name=arrivalDay]").length > 0 && isEmpty($("[name=arrivalDay]").val()))
       || ($("input:radio[name=sleepLocation]:checked").length > 0 && isEmpty($("input:radio[name=sleepLocation]:checked").val()))
       || ($("input[name=allergies]").length > 0 && isEmpty($("input[name=allergies]").val()))
       || ($("input:radio[name=vegetarian]:checked").length > 0 && isEmpty($("input:radio[name=vegetarian]:checked").val()))
@@ -163,13 +163,17 @@ $(document).ready(function() {
         rsvp : $("input:radio[name=rsvp]:checked").val(),
         bachelorPartyRsvp : $("input:radio[name=bachelorPartyRsvp]:checked").val(),
         transport : $("input[name=transport]").val(),
-        arrivalDay : $("input[name=arrivalDay]").val(),
+        arrivalDay : $("[name=arrivalDay]").val(),
         sleepLocation : $("input:radio[name=sleepLocation]:checked").val(),
         allergies : $("input[name=allergies]").val(),
         vegetarian : $("input:radio[name=vegetarian]:checked").val(),
         meetAtanaska : $("textarea[name=meetAtanaska]").val(),
         meetMarin : $("textarea[name=meetMarin]").val(),
-        guests : guests
+        guests : guests,
+        nightsToStay : {
+          'Sat' : $("input[name=nightsToStaySat]").is(':checked'),
+          'Sun' : $("input[name=nightsToStaySun]").is(':checked'),
+        }
       };
     }
 

@@ -3,3 +3,7 @@
 .nav-flag {
   background-image: url(../img/usa-flag.png);
 }
+
+#rsvpSubmit {
+ width: 350px;
+}

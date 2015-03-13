@@ -84,7 +84,7 @@
     <!-- end:navbar -->
 
     <!-- begin:home -->
-    <section id="home" style="background: url(img/img01.jpg);">
+    <section id="home" style="background-image: url(img/surce.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -200,7 +200,7 @@
           <div class="row">
             <div class="col-md-12">
               <p>Because this is a mountain wedding, dress warm and confortably. During the day, we can expect temperatures 20-30 celcius, but the temperatures can drop significantly in the evening.</p>
-              <p>A button down short with short sleeves for the men and a happy dress for the ladies is more than fancy enough for the ceremony.</p>
+              <p>A button down short with short sleeves for the men and a happy dress for the ladies is more than fancy enough for the ceremony. Please, no white dresses. We dont want the groom to get confused. He's getting married for the first time.</p>
             </div>
           </div>
         </div>
@@ -284,6 +284,14 @@
               <input type="radio" name="sleepLocation" value="tent" <?php if ($userRow['sleepLocation'] == 'tent'): ?> checked <?php endif; ?>/> I'd like to sleep in my tent even though a bed is provided for me inside.
             </div>
           </div>
+
+          <div class="row">
+            <div class="col-md-5">Which nights will you be sleeping up on the mountain?</div>
+            <div class="col-md-7">
+              <input type="checkbox" name="nightsToStaySat" <?php echo (strpos($userRow['nightsToStay'], "Sat") === false) ? '' : 'checked'; ?>/> Saturday </br>
+              <input type="checkbox" name="nightsToStaySun" <?php echo (strpos($userRow['nightsToStay'], "Sun") === false) ? '' : 'checked'; ?>/> Sunday
+              </div>
+          </div>
           <div class="row">
             <div class="col-md-5">Do you have any food allergies or concerns we should be aware of?</div>
             <div class="col-md-7"><input name="allergies" value="<?php echo $userRow['allergies']; ?>" type="text"/></div>
@@ -345,30 +353,30 @@
         <div class="row">
           <div class="col-md-4">
             <h2>Atanaska</h2>
-            <p>Atanaska, 21 Tahun. Pria tak tampan yang bercita-cita menjadi jutawan dengan modal pas-pasan.
-            Hobi berenang, menolong teman, sepak bola, main futsal, main PES, dan segala sesuatu tentang bal-balan.
-            Bisanya cuma nyinyir dan komentar, agak sombong tapi nggak arogan. </p>
             <blockquote>
-              Cinta itu.. jika kamu bilang iya ~ waktu aku bertanya "Maukah kau menikah denganku?" #eeaaa
-              <small>Lorenso</small>
+              Nasi is the most internally beautiful person I've ever met.
+              </br>
+              There hasn't been anyone who makes me stop what I'm doing and go out of my way and follow her to show me "something very important," which ends up being a beautiful moon or sunset. And then she turns and smiles with a huge grin on her face.
+              </br>
+              She makes those around her appreciate the important and beautiful things in life.
+              <small>Marin</small>
             </blockquote>
           </div>
           <!-- break -->
 
           <div class="col-md-4">
-            <div class="about-img-container" style="background: url(img/img05.jpg) center;"></div>
+            <div class="about-img-container" style="background: url(img/13.jpg) center;"></div>
             <img src="img/bottom.png" class="about-img img-responsive">
           </div>
           <!-- break -->
 
           <div class="col-md-4">
             <h2>Marin</h2>
-            <p>Marin, 20 Tahun. Wanita periang yang bercita-cita menjadi seorang pendidik dan pengajar.
-            Murah senyum, galak, tapi sangat cengeng. Tinggi, langsing, hidung pesek dan bergingsul.
-            Hobi makan es krim, mie ayam dan ngambek. Care sama temen dan pokoknya lakik #ehh.</p>
             <blockquote>
-              Cinta itu.. jika kamu langsung datang kerumah dan melamarku ~ #duhh
-              <small>Julia</small>
+              "Ако има някое място на света, където няма нито един слънчев ден, аз бих го изпратила там, за да стопли сърцата на хората и да огрява деня им с усмивката си. Както огрява моя."
+            </br>
+            Едва ли има друг мъж, който преди да предложи брак е казал:"Моля те не се шашкай!"
+              <small>Atanaska</small>
             </blockquote>
           </div>
           <!-- break -->
@@ -380,7 +388,7 @@
   <!-- end:about -->
 
   <!-- begin:ceremony -->
-  <section id="ceremony" style="background: url(img/img04.jpg);">
+  <section id="ceremony" style="background: url(img/1.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -524,72 +532,84 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>The Story</h2>
+          <h2>Our Story</h2>
           <ul class="content">
             <li>
               <h3 class="content-avatar avatar-top">
-                <div class="img-avatar" style="background: url(img/img08.jpg);"></div>
+                <div class="img-avatar" style="background-image: url(img/18.jpg); background-position: 0px -28px;"></div>
               </h3>
               <ul>
                 <!-- begin:content-text -->
-                <li class="content-item content-text">
-                  <h3>Hae :"></h3>
-                  <div class="text">I meet you at the first time. I smile, and you don't smile back to me. I was silent, and you laugh out loud alone. I'ts so fuck'in romantic epic. :))</div>
-                  <time datetime=""><i class="fa fa-calendar"></i> December, 19 2010</time>
+                <li class="content-item content-photo">
+                  <h3>Meeting:</h3>
+                  <img src="img/1.jpg" alt="">
+                  <time datetime=""><i class="fa fa-calendar"></i> 12 July, 2012 in front of Hija Rai</time>
                 </li>
                 <!-- end:content-text -->
 
                 <!-- begin:content-photo -->
-                <li class="content-item content-photo">
-                  <img src="img/img05.jpg" alt="ditinggal rabi - together"> 
-                  <p class="caption">At the first date, we ate ice cream and "cemong" together. We enjoyed the evening. Sitting on the bench side of the road. Telling each other silly thing, and I was able to make a little melted. Emm.. I mean make your ice cream melts. :|</p>
-                  <time datetime=""><i class="fa fa-calendar"></i> January, 19 2011</time>
+                <li class="content-item content-text">
+                  <h3>How we got there:</h3>
+                  <p class="caption">Every summer, when He comes home to Bulgaria, he organizes a hike with friends up to Hija Rai, (where his parents met). She has never been there before, but two weeks earlier, while traveling with a friend, the pick up a hitchiker, Alex, one of Marin's friends. Alex invites them to go hiking. She decides to go and hops alone on a night train  from Varna to Kalofer at 3 in the morning. After the hike, they meet in front of the hut.</p>
+                  <time datetime=""><i class="fa fa-calendar"></i> 12 July, 2012</time>
                 </li>
                 <!-- end:content-photo -->
 
-                <!-- begin:content-photo -->
-                <li class="content-item content-photo">
-                  <img src="img/img06.jpg" alt="ditinggal rabi - sleep together">
-                  <time datetime=""><i class="fa fa-calendar"></i> February, 19 2011</time> 
+
+                <!-- begin:content-text -->
+                <li class="content-item content-text">
+                  <h3>First non-date:</h3>
+                  <img src="img/16.jpg" alt="">
+                  <time datetime=""><i class="fa fa-calendar"></i> 31 July, 2012, Varna</time>
                 </li>
-                <!-- end:content-photo -->
+                <!-- end:content-text -->
+
+                <!-- begin:content-text -->
+                <li class="content-item content-text">
+                  <h3>First date:</h3>
+                  <img src="img/17.jpg" alt="">
+                  <time datetime=""><i class="fa fa-calendar"></i> 2 August, 2012, Varna</time>
+                </li>
+                <!-- end:content-text -->
+
+
+                <!-- begin:content-text -->
+                <li class="content-item content-text">
+                  <h3>First dance:</h3>
+                  <div class="text">Elvis Presley - Can’t help falling in love with you</div>
+                  <time datetime=""><i class="fa fa-calendar"></i> 15 August 2013, Prague</time>
+                </li>
+                <!-- end:content-text -->
+
+
+
 
                 <!-- begin:content-chat -->
                 <li class="content-item content-chat">
-                  <p class="text chat odd">A : Sist..</p>
-                  <p class="text chat even">B : Yeah..</p>
-                  <p class="text chat odd">A : Sist..</p>
-                  <p class="text chat even">B : Yeahh broth..</p>
-                  <p class="text chat odd">A : Would you be..</p>
-                  And then silence....
-                  <time datetime=""><i class="fa fa-calendar"></i> March, 26 2011</time>
+                  <h3>The proposal:</h3>
+                  <p class="text chat even">Gloria: “Nasi, have you and Marin thought about getting married?”</p>
+                  <div class="text">She says no. He's standing next to her with the ring in His pocket. His expression - priceless. Her explanation - he is 4 years younger and she doesnt want to rush him into anything he's not ready for.</div>
+                  <img src="img/11.jpg" alt="">
+                  <time datetime=""><i class="fa fa-calendar"></i> 16 February 2013, California</time>
                 </li>
                 <!-- end:content-chat -->
 
-                <!-- begin:content-quote -->
-                <li class="content-item content-quote">
-                  <blockquote>
-                    <p>I do not promise anything, I can only promise one thing. I would still handsome until tomorrow... <small>avriqq</small></p>
-                    <time datetime=""><i class="fa fa-calendar"></i> March, 26 2013</time>
-                  </blockquote>
+                <!-- begin:content-chat -->
+                <li class="content-item content-chat">
+                  <h3>Decision on wedding location:</h3>
+                  <div class="text">The same day, while laying in a hammock between the great California red woods, they decide the wedding will be in the same place they met on the same day of the year.</div>
+                  <img src="img/19.jpg" alt="">
+                  <time datetime=""><i class="fa fa-calendar"></i> 16 February 2013, California</time>
                 </li>
-                <!-- end:content-quote -->
+                <!-- end:content-chat -->
 
-                <!-- begin:content-photo -->
-                <li class="content-item content-photo">
-                  <img src="img/img07.jpg" alt="ditinggal rabi - wedding ring">
-                  <p class="caption">And finally, we are now getting married. :')</p>
-                  <time datetime=""><i class="fa fa-calendar"></i> March, 26 2016</time>
-                </li>
-                <!-- end:content-photo -->
 
-                
               </ul>
             </li>
 
             <li class="content-end">
               <h3 class="content-avatar avatar-end">
-                <div class="img-avatar" style="background: url(img/avatar.png);"></div>
+                <div class="img-avatar" style="background-image: url(img/12.jpg); background-position: -36px 0px;"></div>
               </h3>
             </li>
           </ul>

@@ -1,10 +1,9 @@
 <?php
 
+include "dbCreds.php";
 try {
-  $dbhost = '127.0.0.1';
-  $dbuser = 'root';
-  $dbpass = 'marin';
-  $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+
+  $conn = mysql_connect($servername, $username, $password);
   if(! $conn )
   {
     die('{"success": false, "message": "'.mysql_error().'"}');

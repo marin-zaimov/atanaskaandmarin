@@ -1,7 +1,9 @@
 <?php
 
 function getGuest($email) {
-
+  if (empty($email)) {
+    return null;
+  }
   include "dbCreds.php";
   try {
 

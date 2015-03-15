@@ -230,7 +230,7 @@
               <input type="radio" name="rsvp" value="N" id="rsvp-radio-no" <?php if ($userRow['rsvp'] == 'N'): ?> checked <?php endif; ?>/> No
             </div>
           </div>
-          
+
           <?php if (sizeof($userRow['relatedUsers']) > 0): ?>
           <div class="row">
             <div class="col-md-5">Which of the following related guests will be accompanying you?</div>
@@ -334,7 +334,7 @@
           Your inputs have been saved!
         </div>
 
-        <div id="saveFailMessage" class="alert alert-success" role="alert" style="display: none">
+        <div id="saveFailMessage" class="alert alert-danger" role="alert" style="display: none">
           <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
           <span class="sr-only">Error:</span>
           Save Failed. Please email thissitesucks@atanaskaandmarin.com for help.

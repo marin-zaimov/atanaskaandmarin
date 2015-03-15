@@ -338,7 +338,7 @@
           Отговорите ви са записани!
         </div>
 
-        <div id="saveFailMessage" class="alert alert-success" role="alert" style="display: none">
+        <div id="saveFailMessage" class="alert alert-danger" role="alert" style="display: none">
           <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
           <span class="sr-only">Грешка:</span>
           Неуспешно записване. Моля пратете имейл на thissitesucks@atanaskaandmarin.com за помощ.

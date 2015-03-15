@@ -198,6 +198,7 @@ $(document).ready(function() {
   function clearMessages() {
     $('#fieldRequiredMessage').hide();
     $('#savedMessage').hide();
+    $('saveFailMessage').hide();
   }
   function fieldRequiredMessage(message) {
     $('#fieldRequiredMessage').show();

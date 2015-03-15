@@ -3,11 +3,13 @@
   
   function adjustUrlToUserLanguage($userRow)
   {
-    if ($userRow['language'] == "BG" && $_SERVER['SCRIPT_NAME'] == "/index.php") {
-      switchToBG();
-    }
-    if ($userRow['language'] == "ENG" && $_SERVER['SCRIPT_NAME'] == "/indexBG.php") {
-      switchToENG();
+    if (!empty($userRow['email'])) {
+      if ($userRow['language'] == "BG" && $_SERVER['SCRIPT_NAME'] == "/index.php") {
+        switchToBG();
+      }
+      if ($userRow['language'] == "ENG" && $_SERVER['SCRIPT_NAME'] == "/indexBG.php") {
+        switchToENG();
+      }
     }
   }
 

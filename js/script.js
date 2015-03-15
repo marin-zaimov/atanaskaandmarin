@@ -182,7 +182,8 @@ $(document).ready(function() {
     }
     return {
       email: $('#hiddenEmail').val(),
-      rsvp: $("input:radio[name=rsvp]:checked").val()
+      rsvp: $("input:radio[name=rsvp]:checked").val(),
+      guests : guests,
     };
   }
 

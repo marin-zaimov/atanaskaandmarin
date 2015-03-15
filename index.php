@@ -230,6 +230,17 @@
               <input type="radio" name="rsvp" value="N" id="rsvp-radio-no" <?php if ($userRow['rsvp'] == 'N'): ?> checked <?php endif; ?>/> No
             </div>
           </div>
+          
+          <?php if (sizeof($userRow['relatedUsers']) > 0): ?>
+          <div class="row">
+            <div class="col-md-5">Which of the following related guests will be accompanying you?</div>
+            <div class="col-md-7">
+              <?php foreach ($userRow['relatedUsers'] as $guest): ?>
+                <input class="rsvp-guest" type="checkbox" data-id="<?php echo $guest['id']; ?>" value="Y" <?php echo ($guest['rsvp'] == 'Y') ? 'checked' : ''; ?>/> <?php echo $guest['firstName'] . ' ' .$guest['lastName']; ?></br>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        <?php endif; ?>
 
 
           <?php if ($userRow['bachelorPartyInvited'] == 'Y'): ?>
@@ -242,17 +253,8 @@
             </div>
           <?php endif; ?>
 
-          <?php if (sizeof($userRow['relatedUsers']) > 0): ?>
-          <div class="row restOfForm">
-            <div class="col-md-5">Which of the following friends will be accompanying you?</div>
-            <div class="col-md-7">
-              <?php foreach ($userRow['relatedUsers'] as $guest): ?>
-                <input class="rsvp-guest" type="checkbox" data-id="<?php echo $guest['id']; ?>" value="Y" <?php echo ($guest['rsvp'] == 'Y') ? 'checked' : ''; ?>/> <?php echo $guest['firstName'] . ' ' .$guest['lastName']; ?></br>
-              <?php endforeach; ?>
-            </div>
-          </div>
         </div>
-        <?php endif; ?>
+          
 
         
 

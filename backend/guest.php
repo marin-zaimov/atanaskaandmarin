@@ -34,6 +34,7 @@ function getGuest($email) {
         }
       }
       if ($userToReturn != null) {
+        $relatedUsers[] = $userToReturn;
         $userToReturn['relatedUsers'] = $relatedUsers;
       }
       return $userToReturn;

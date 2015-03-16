@@ -308,59 +308,7 @@ a:hover{
 	text-shadow: 2px 1px 0 rgba(0,0,0,.25);
 }
 
-#home h3:before,
-#ceremony h3:before{
-	content: "";
-	position: absolute;
-	z-index: 3px;
-	left: 20%;
-	top: 50%;
-	height: 2px;
-	width: 20%;
-	margin-top: 0;
-	background: #fff;
-}
 
-#home h3:after,
-#ceremony h3:after{
-	content: "";
-	position: absolute;
-	z-index: 3px;
-	right: 20%;
-	top: 50%;
-	height: 2px;
-	width: 20%;
-	margin-top: 0;
-	background: #fff;
-}
-
-#home h3 span:before,
-#ceremony h3 span:before{
-	content: "";
-	position: absolute;
-	z-index: 2px;
-	left: 20%;
-	top: 50%;
-	height: 2px;
-	width: 20%;
-	margin-top: 0.5px;
-	margin-left: 1px;
-	background: rgba(0,0,0,.25);
-}
-
-#home h3 span:after,
-#ceremony h3 span:after{
-	content: "";
-	position: absolute;
-	z-index: 2px;
-	right: 20%;
-	top: 50%;
-	height: 2px;
-	width: 20%;
-	margin-top: 0.5px;
-	margin-left: 1px;
-	background: rgba(0,0,0,.25);
-}
 
 #home h4,
 #ceremony h4{

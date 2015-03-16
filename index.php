@@ -89,6 +89,15 @@
         <div class="row">
           <div class="col-md-12">
             <h1>Atanaska & Marin</h1>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+
           <h3><span>Are getting</span></h3>
           <!-- <div class="line"><h3>Are getting</h3></div> -->
           <h2><i class="fa fa-heart-o"></i> MARRIED! <i class="fa fa-heart-o"></i></h2>
@@ -376,9 +385,10 @@
           <div class="col-md-4">
             <h2>Marin</h2>
             <blockquote>
-              "Ако има някое място на света, където няма нито един слънчев ден, аз бих го изпратила там, за да стопли сърцата на хората и да огрява деня им с усмивката си. Както огрява моя."
-            </br>
-            Едва ли има друг мъж, който преди да предложи брак е казал:"Моля те не се шашкай!"
+              If there is any place in the world where there is not even one sunny day, I would send him there to warm people's hearts and brightens their day with his shining smile. As he does to mine.
+
+              </br>
+              I doubt there is another man who before proposing have said: "Please, do not freak out!"
               <small>Atanaska</small>
             </blockquote>
           </div>
@@ -391,7 +401,7 @@
   <!-- end:about -->
 
   <!-- begin:ceremony -->
-  <section id="ceremony" style="background: url(img/1.jpg);">
+  <section id="ceremony" style="background-image: url(img/1.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -591,7 +601,7 @@
                 <li class="content-item content-chat">
                   <h3>The proposal:</h3>
                   <p class="text chat even">Gloria: “Nasi, have you thought about getting married to Marin?”</p>
-                  <div class="text">She says no. He's standing next to her with the ring in His pocket. His expression - priceless. Her explanation - he is 4 years younger and she doesnt want to rush him into anything he's not ready for.</div>
+                  <div class="text">She says no. He's standing next to her with the ring in His pocket. His expression - priceless. Her explanation - he is 4 years younger and she doesnt want to rush him into anything he's not ready for. Her explanation calms him down and he bravely proposes later the same day.</div>
                   <img src="img/11.jpg" alt="">
                   <time datetime=""><i class="fa fa-calendar"></i> 16 February 2013, California</time>
                 </li>

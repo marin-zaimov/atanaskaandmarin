@@ -143,3 +143,18 @@
   padding-top: 90px;
 }
 
+#home {
+  height: 1000px;
+}
+
+#home h2, #ceremony h2 {
+  font-size: 90px;
+  font-family: 'Dancing Script', cursive;
+}
+
+#story h2 {
+  color: #666 
+}
+
+
+

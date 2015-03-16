@@ -12,7 +12,7 @@ function getGuest($email) {
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-    } 
+    }
 
   //TODO(Marin): send back all fields here
     $sql = "SELECT * FROM guests";

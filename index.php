@@ -230,7 +230,7 @@
 
 
         <div class="answer-section">
-          <h3>R.S.V.P.</h3>
+          <h3>R.S.V.P. - please respond before May 1st</h3>
 
           <div class="row">
             <div class="col-md-5">Are you joining Atanaska and Marin on July 12th, 2015?</div>

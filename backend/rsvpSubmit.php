@@ -8,8 +8,9 @@ try {
   {
     die('{"success": false, "message": "'.mysql_error().'"}');
   }
-  $conn->set_charset('utf8');
 
+  mysql_set_charset('utf8',$conn);
+  
   $sql = 'UPDATE guests';
   $sql .= ' SET rsvp=\''.$_POST['rsvp'].'\'';
 

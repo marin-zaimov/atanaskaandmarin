@@ -83,11 +83,11 @@
     <!-- end:navbar -->
 
     <!-- begin:home -->
-    <section id="home" style="background-image: url(img/surce.jpg);">
+    <section class="adventure" id="home" style="background-image: url(img/surce.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="adventure" style="color: #CCC">Атанаска & Марин</h1>
+            <h1 style="color: #CCC">Атанаска & Марин</h1>
             </br>
             </br>
             </br>

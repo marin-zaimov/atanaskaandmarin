@@ -102,7 +102,7 @@
           <h2><i class="fa fa-heart-o"></i> ЖЕНЯТ! <i class="fa fa-heart-o"></i></h2>
           <h4>И с удоволствие ви канят да бъдете техни гости</h4>
           <h5><span id="rsvp-span">
-            ~ RSVP ~ &nbsp;
+            ~ RSVP ~
             <span style="display:none;" id="rsvp-email-div">
               <input  id="rsvp-input" placeholder="Email" /> &nbsp;
               <button id="rsvp-go">Клик!</button>

@@ -103,7 +103,7 @@
           <h2><i class="fa fa-heart-o"></i> MARRIED! <i class="fa fa-heart-o"></i></h2>
           <h4>And They are pleased to Invite you</h4>
           <h5><span id="rsvp-span">
-            ~ RSVP ~ &nbsp; 
+            ~ RSVP ~
             <span style="display:none;" id="rsvp-email-div">
               <input  id="rsvp-input" placeholder="Email" /> &nbsp;
               <button id="rsvp-go">Go!</button>

@@ -136,6 +136,9 @@ $(document).ready(function() {
     if (selected.length > 0) {
         selectedVal = selected.val();
     }
+    else {
+      return null;
+    }
 
     var guests = {};
     if ($('.rsvp-guest').length > 0) {

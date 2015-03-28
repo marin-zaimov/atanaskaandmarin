@@ -10,26 +10,26 @@ try {
   }
 
   mysql_set_charset('utf8',$conn);
-  
+
   $sql = 'UPDATE guests';
-  $sql .= ' SET rsvp=\''.$_POST['rsvp'].'\'';
+  $sql .= ' SET rsvp=\''. mysql_real_escape_string($_POST['rsvp']).'\'';
 
   if (!empty($_POST['bachelorPartyRsvp']))
-    $sql .= ', bachelorPartyRsvp=\''.$_POST['bachelorPartyRsvp'].'\'';
+    $sql .= ', bachelorPartyRsvp=\''. mysql_real_escape_string($_POST['bachelorPartyRsvp']).'\'';
   if (!empty($_POST['transport']))
-    $sql .= ', transport=\''.$_POST['transport'].'\'';
+    $sql .= ', transport=\''. mysql_real_escape_string($_POST['transport']).'\'';
   if (!empty($_POST['arrivalDay']))
-    $sql .= ', arrivalDay=\''.$_POST['arrivalDay'].'\'';
+    $sql .= ', arrivalDay=\''. mysql_real_escape_string($_POST['arrivalDay']).'\'';
   if (!empty($_POST['sleepLocation']))
-    $sql .= ', sleepLocation=\''.$_POST['sleepLocation'].'\'';
+    $sql .= ', sleepLocation=\''. mysql_real_escape_string($_POST['sleepLocation']).'\'';
   if (!empty($_POST['allergies']))
-    $sql .= ', allergies=\''.$_POST['allergies'].'\'';
+    $sql .= ', allergies=\''. mysql_real_escape_string($_POST['allergies']).'\'';
   if (!empty($_POST['vegetarian']))
-    $sql .= ', vegetarian=\''.$_POST['vegetarian'].'\'';
+    $sql .= ', vegetarian=\''. mysql_real_escape_string($_POST['vegetarian']).'\'';
   if (!empty($_POST['meetAtanaska']))
-    $sql .= ', meetAtanaska=\''.$_POST['meetAtanaska'].'\'';
+    $sql .= ', meetAtanaska=\''. mysql_real_escape_string($_POST['meetAtanaska']).'\'';
   if (!empty($_POST['meetMarin']))
-    $sql .= ', meetMarin=\''.$_POST['meetMarin'].'\'';
+    $sql .= ', meetMarin=\''. mysql_real_escape_string($_POST['meetMarin']).'\'';
   $nightsToStay = '';
   if (!empty($_POST['nightsToStay'])) {
     foreach ($_POST['nightsToStay'] as $night => $stayBoolean) {
@@ -38,9 +38,9 @@ try {
       }
     }
   }
-  $sql .= ', nightsToStay=\''.$nightsToStay.'\'';
-  $sql .= 'WHERE email=\''.$_POST['email'].'\' AND emailOwner = \'Y\'';
-
+  $sql .= ', nightsToStay=\''. mysql_real_escape_string($nightsToStay).'\'';
+  $sql .= 'WHERE email=\''. mysql_real_escape_string($_POST['email']).'\' AND emailOwner = \'Y\'';
+  
   mysql_select_db('atanaskaandmarin');
   $retval = mysql_query( $sql, $conn );
   if(! $retval )

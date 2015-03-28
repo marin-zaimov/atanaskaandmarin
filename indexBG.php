@@ -242,7 +242,7 @@
           </div>
 
 
-          <?php if (sizeof($userRow['relatedUsers']) > 0): ?>
+          <?php if (sizeof($userRow['relatedUsers']) > 1): ?>
           <div class="row">
             <div class="col-md-5">Кои от поканените ще присъстват?</div>
             <div class="col-md-7">

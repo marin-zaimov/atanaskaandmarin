@@ -240,7 +240,7 @@
             </div>
           </div>
 
-          <?php if (sizeof($userRow['relatedUsers']) > 0): ?>
+          <?php if (sizeof($userRow['relatedUsers']) > 1): ?>
           <div class="row">
             <div class="col-md-5">Which of the following related guests will be accompanying you?</div>
             <div class="col-md-7">

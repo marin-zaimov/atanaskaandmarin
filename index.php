@@ -407,7 +407,7 @@
         <div class="col-md-12">
           <h1>The Ceremony</h1>
           <h3><span>Will Be Held On</span></h3>
-          <h2>12 July, 2013</h2>
+          <h2>12 July, 2015</h2>
           <!-- <h5><span>~ July ~</span></h5> -->
           <h4>Chapel next to Hija Rai,  4:00 PM</h4>
         </div>

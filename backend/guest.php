@@ -27,7 +27,7 @@ function getGuest($email) {
       $relatedUsers = array();
       // output data of each row
       while($row = $result->fetch_assoc()) {
-        if (trim($emailToSearchFor) == trim($row['email'])) {
+        if (trim($emailToSearchFor) == trim($row['email']) || strcasecmp(trim($emailToSearchFor), trim($row['email'])) == 0) {
           if ($row['emailOwner'] == 'Y') {
             $userToReturn = $row;
           }
